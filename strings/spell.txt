@@ -1,0 +1,2227 @@
+# Start a line with # to make a comment
+# :identifier: marks a new string, strings continue until next identifier, have leading and trailing whitespace trimmed
+
+:modify_banner:
+	Select a tile to modify
+
+:remove_banner:
+	Select a tile to remove
+
+:punch_banner:
+	Select a tile to punch
+
+:spell_select_banner:
+	Select a spell to replace
+
+:default_preview_title:
+	Tile Preview
+
+:spell_title:
+	{:cursed_spell_title: if curse_name}{spell_name not curse_name}
+
+:cursed_spell_title:
+	{spell_name} {curse_name} 
+
+:letter_opener:
+	:name:
+		Ouvre-lettre{"?" if curse "cursed"}
+
+	:description:
+		Retire une tuile.
+		Peut pas retirer une tuile avec des statuts négatifs.
+
+	:label:
+		Retire une tuile{"?" if curse "cursed"}
+
+	:banner:
+		{:remove_banner:}
+
+	:charge_characters:
+		e
+
+	:max_charge:
+		4
+
+	:flags:
+		lexicographer removes_word
+
+:silver_letter_opener:
+	:name:
+		Ouvre-lettre argenté{"?" if curse "cursed"}
+
+	:description:
+		Retire n'importe quelle tuile.
+
+	:label:
+		Retire une tuile{"?" if curse "cursed"}
+
+	:banner:
+		{:remove_banner:}
+
+	:charge_category:
+		auto
+
+	:max_charge:
+		4
+
+	:flags:
+		lexicographer removes_word
+
+:hole_punch:
+	:name:
+		Poinçonneuse{"?" if curse "cursed"}
+
+	:description:
+		Poinçonne une tuile.
+
+	:label:
+		Poinçonner{"?" if curse "cursed"}
+
+	:banner:
+		{:punch_banner:}
+
+	:charge_category:
+		auto
+
+	:max_charge:
+		1
+
+	:flags:
+		child
+
+:scalpel:
+	:name:
+		Scalpel{"?" if curse "cursed"}
+
+	:description:
+		{:hole_punch/description:}
+
+	:label:
+		{:hole_punch/label:}
+
+	:banner:
+		{:punch_banner:}
+
+	:charge_category:
+		auto
+
+	:max_charge:
+		2
+
+	:flags:
+		child
+
+:fishing_rod:
+	:name:
+		Canne à pêche{"?" if curse "cursed"}
+
+	:description:
+		Attrape des poissons-tuiles.
+		Clique pour ramener la ligne.
+
+	:label:
+		Pars pêcher{"?" if curse "cursed"}
+
+	:charge_category:
+		auto
+
+	:max_charge:
+		1
+
+	:flags:
+		fisher removes_word
+
+:reinforced_fishing_rod:
+	:name:
+		Canne à pêche renforcée{"?" if curse "cursed"}
+
+	:description:
+		{:fishing_rod/description:}
+
+		A weighted hook allows for a slower reeling speed and for more fish to be caught.
+
+	:label:
+		Hook & sinker{"?" if curse "cursed"}
+
+	:charge_category:
+		auto
+
+	:max_charge:
+		1
+
+	:flags:
+		fisher removes_word
+
+:salt:
+	:name:
+		Sel{"?" if curse "cursed"}
+
+	:description:
+		Transforme une tuile en bombe et divise le temps en deux.
+		La tuile est selectionnée à partir du temps restant:
+
+	:label:
+		Brouillard cérébral{"?" if curse "cursed"}
+
+	:charge_category:
+		auto
+
+	:max_charge:
+		3
+
+	:flags:
+		addict discharge_on_load
+
+:salt_and_pepper:
+	:name:
+		Sel et Poivre{"?" if curse "cursed"}
+
+	:description:
+		Convertis une tuile au hazard en bombe numerotée et divise le temps en deux.
+		Sec. paires: bombes en Bois.
+		Sec. imparies: bombes en Plastique.
+		Perds une charge toutes les 10 secondes.
+
+	:label:
+		Brouillard cérébral{"?" if curse "cursed"}
+
+	:charge_category:
+		auto
+
+	:max_charge:
+		3
+
+	:flags:
+		addict discharge_on_load
+
+:gift:
+	:name:
+		Cadeau {:category_name: not curse "cursed"}{"?" if curse "cursed"}
+
+	:category_name:
+		{Défensif if id "gift_defense"}
+		{Amélioratif if id "gift_enhancing"}
+		{Utilitaire if id "gift_puzzle"}
+		{Défensif if id "miracle_cache_defense"}
+		{Amélioratif if id "miracle_cache_enhancing"}
+		{Utilitaire if id "miracle_cache_puzzle"}
+
+	:description:
+		Deviens un sort {:gift/category_name: not curse "cursed"}{" mystère" if curse "cursed"} au début de chaque combat.
+
+	:label:
+		Sort {:category_name: not curse "cursed"}{" mystère" if curse "cursed"}{"?" if curse "cursed"}
+
+	:charge_category:
+		unlimited
+
+	:flags:
+		force_allow_charge_curse
+
+:miracle_cache: {inherits :gift:}
+	:name:
+		Cadeau Miraculeux {:gift/category_name: not curse "cursed"}{"?" if curse "cursed"}
+
+	:description:
+		Deviens un sort {:gift/category_name: not curse "cursed"}{" mystère" if curse "cursed"} au début de chaque combat.
+
+# this sucked i’m really glad i added inheritance
+:gift_enhancing: {inherits :gift:}
+:gift_defense: {inherits :gift:}
+:gift_puzzle: {inherits :gift:}
+:miracle_cache_enhancing: {inherits :miracle_cache:}
+:miracle_cache_defense: {inherits :miracle_cache:}
+:miracle_cache_puzzle: {inherits :miracle_cache:}
+
+:backspace:
+	:name:
+		Retour
+
+	:description:
+		Retire une tuile et toutes celles a sa gauche.
+
+	:label:
+		Retour arrière
+
+	:banner:
+		{:remove_banner:}
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		3
+
+	:flags:
+		removes_word
+
+:first_aid:
+	:name:
+		Premier Soins
+
+	:description:
+		Change une tuile en un X bonbon plastique.
+
+	:label:
+		X bonbon plastique
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		2
+
+:board_shear:
+	:name:
+		Board Shear
+
+	:description:
+		Retire toutes les tuiles d'une colonne, décale à gauche en suite.
+
+	:label:
+		Retire une colonne
+
+	:banner:
+		Selectionne une colonne à retirer
+
+	:charge_category:
+		common
+
+	:max_charge:
+		4
+
+	:flags:
+		removes_word
+
+:broken_heart:
+	:name:
+		Cœur brisé
+
+	:description:
+		Change une tuile en un 3 bonbon (DEF).
+
+	:label:
+		3 bonbon
+
+	:unlock:
+		Bats un ennemi avec <3 PV restanbts.
+
+	:charge_category:
+		uncommon
+
+	:exclude_characters:
+		def
+
+	:max_charge:
+		3
+
+:bug_spray:
+	:name:
+		Spray anti-insectes
+
+	:description:
+		Retire les statuts d'une tuile et celles adjacentes.
+
+	:label:
+		Retire les statuts
+
+	:charge_category:
+		common
+
+	:max_charge:
+		3
+
+:c4:
+	:name:
+		C-4
+
+	:description:
+		Change une tuile en une bombe plastique 4 (GHI) avec une mèche de 2 tours de long.
+
+	:label:
+		Bombe plastique 4
+
+	:unlock:
+		Beat Paradigm without letting any bombs explode.
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		2
+
+:candy_cigarette:
+	:name:
+		Clopes en gomme
+
+	:description:
+		Change une tuile en un Joker bonbon.
+
+	:label:
+		Joker bonbon
+
+	:charge_category:
+		rare
+
+	:max_charge:
+		2
+
+:caps_lock:
+	:name:
+		Verr. Maj.
+
+	:description:
+		Change une tuile au hazard en une Majuscule Critique.
+
+	:label:
+		Maj. Critique au hazard
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		2
+
+:cats_cradle:
+	:name:
+		Berceau du Chat
+
+	:description:
+		Convertis une tuile au hazard en bombe avec une mèche de 1 tour.
+
+	:label:
+		Bombe mystère
+
+	:unlock:
+		Laisse exploser une bombe.
+
+	:charge_category:
+		rare
+
+	:max_charge:
+		2
+
+:draft_card:
+	:name:
+		Draft Card
+
+	:description:
+		Convert two tiles to burning suits.
+
+	:label:
+		Burning suits
+
+	:unlock:
+		Bats l'ombre d'un ennemi.
+
+	:charge_category:
+		common
+
+	:max_charge:
+		2
+
+:lip_balm:
+	:name:
+		{:lip_balm_name: not icbm}
+		{:icbm_name: if icbm}
+
+	:lip_balm_name:
+		Baume à lèvres
+
+	:icbm_name:
+		ICBM
+
+	:description:
+		{:lip_balm_description: not icbm}
+		{:icbm_description: if icbm}
+
+	:lip_balm_description:
+		Change N'IMPORTE QUELLE tuile et les tuiles horizontalement adjacentes..
+
+	:icbm_description:
+		Change deux tuiles au hazard en bombes bigrammes en bois.
+
+	:label:
+		{:lip_balm_label: not icbm}
+		{:icbm_label: if icbm}
+
+	:lip_balm_label:
+		Freeze tiles
+
+	:icbm_label:
+		Bombes bigrammes
+
+	:unlock:
+		Gagne une partie sans prendre de dégâts.
+
+	:banner:
+		Selectionner une ligne a modifier
+
+	:charge_category:
+		rare
+
+	:max_charge:
+		3
+
+:cotton_candy_tampon:
+	:name:
+		Cotton Candy Tampon
+
+	:description:
+		Convert a tile to period candy.
+
+	:label:
+		Period candy
+
+	:unlock:
+		Spell an 8+ letter word with a period.
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		3
+
+:cigarette:
+	:name:
+		Clope
+
+	:description:
+		Change une tuile en cendre Joker.
+
+	:label:
+		Cendre Joker
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		3
+
+:cigarette_butt:
+	:name:
+		Filtre
+
+	:description:
+		Change N'IMPORTE QUELLE tuile en charbon.
+
+	:label:
+		Change en charbon
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		3
+
+:clown_cache:
+	:name:
+		Cadeau Clownesque
+
+	:description:
+		Deviens un sort au hazard au debut de chaque combat.
+
+	:label:
+		Sort au hazard
+
+	:unlock:
+		Bats le jeu en tant que Jubiliste dans une partie non-journalière.
+
+	:charge_category:
+		unlimited
+
+	:flags:
+		force_allow_charge_curse
+
+:code_switch:
+	:name:
+		Code Switch
+
+	:description:
+		Randomize the face of all tiles.
+
+	:label:
+		Reroll board
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		3
+
+	:flags:
+		removes_word
+
+:corkline:
+	:name:
+		Corkline
+
+	:description:
+		Replace a random tile in the queue with a wildcard.
+
+	:label:
+		Queue wildcard
+
+	:unlock:
+		Beat the game as the Fisher in a non-daily run.
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		3
+
+:ctrl:
+	:name:
+		CTRL
+
+	:description:
+		Replace all instances of a tile face with another.
+
+	:label:
+		Find and replace
+
+	:banner:
+		{:find_banner: if find}
+		{:replace_banner: not find}
+
+	:find_banner:
+		Select a tile to find (to be replaced)
+
+	:replace_banner:
+		Select a tile to replace {face upper} with
+
+	:charge_characters:
+		r
+
+	:max_charge:
+		4
+
+:t_gel:
+	:name:
+		T Gel
+
+	:description:
+		Remove all tiles with an E.
+		+5% {"crit" not wildcard}{"wildcard" if wildcard} chance for every tile removed.
+
+	:label:
+		Remove E
+
+	:unlock:
+		Beat the game as the Child in a non-daily run.
+
+	:charge_characters:
+		t
+
+	:max_charge:
+		3
+
+	:flags:
+		removes_word
+
+:damaged_goods:
+	:name:
+		Biens Endommagés
+
+	:description:
+		Poinçonne une tuile et change huit tuiles en hématome.
+
+	:label:
+		Poinçonne
+
+	:unlock:
+		Bats le jeu en tant que l'Enfant sous Autorisation Céruléene dans une partie non-journalière.
+
+	:banner:
+		{:punch_banner:}
+
+	:charge_category:
+		very_rare
+
+	:max_charge:
+		1
+
+:dime:
+	:name:
+		Dime
+
+	:description:
+		Rapidly cycle a tile’s face through the alphabet twice. Click the tile again to stop cycling.
+
+	:label:
+		Cycle letter
+
+	:unlock:
+		Beat the game as the Addict in a non-daily run.
+
+	:charge_category:
+		common
+
+	:max_charge:
+		3
+
+:sealed_packet:
+	:name:
+		Paquet scéllé
+
+	:description:
+		Change une tuile en Fric double-Joker.
+
+	:label:
+		Fric $$
+
+	:unlock:
+		Utilise 4+ tuiles enchainées contre Umami.
+
+	:charge_category:
+		common
+
+	:max_charge:
+		2
+
+:dna_tweezers:
+	:name:
+		DNA Tweezers
+
+	:description:
+		Modify a tile’s face using a binary 3x3 grid.
+
+	:label:
+		Modify letter
+
+	:unlock:
+		Submit a word with 5+ different status effects.
+
+	:charge_characters:
+		atgc
+
+	:max_charge:
+		3
+
+	:flags:
+		removes_word
+
+:eight_ball:
+	:name:
+		Boule noire
+
+	:description:
+		Change une tuile en bombe en bois 8 (TUV) avec une mèche de 2 tours de long.
+
+	:label:
+		Bombe en bois 8
+
+	:unlock:
+		Prends 8 de dégâts ou plus en un tour.
+
+	:charge_characters:
+		o
+
+	:max_charge:
+		2
+
+:eye_drops:
+	:name:
+		Eye Drops
+
+	:description:
+		Convert two tiles to frozen I’s.
+
+	:label:
+		Frozen I’s
+
+	:charge_characters:
+		c
+
+	:max_charge:
+		2
+
+:fake_id:
+	:name:
+		Fake ID
+
+	:description:
+		Convert wooden tiles to plastic and plastic tiles to wood.
+
+	:label:
+		Swap tile type
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		4
+
+:fingernail:
+	:name:
+		Fingernail
+
+	:description:
+		{:store_description: if store}
+		{:place_description: not store}
+
+	:store_description:
+		Store a tile to place later.
+		The stored tile persists between runs.
+
+	:place_description:
+		Replace a tile with the stored tile.
+		Cannot replace tiles with harmful status effects.
+
+	:label:
+		{:store_label: if store}
+		{:place_label: not store}
+
+	:store_label:
+		Store a tile
+
+	:place_label:
+		Place a tile
+
+	:stored_preview_title:
+		Stored Tile
+
+	:banner:
+		{:store_banner: if store}
+		{:place_banner: not store}
+
+	:store_banner:
+		{:remove_banner:}
+
+	:place_banner:
+		{:modify_banner:}
+
+	:charge_category:
+		common
+
+	:max_charge:
+		4
+
+:fishing_rifle:
+	:name:
+		Fishing Rifle
+
+	:description:
+		All tiles on the board are thrown into the air as fish. Shoot fish to destroy them.
+
+	:label:
+		Radical fishing
+
+	:unlock:
+		Beat the game as the Fisher on Cerulean Clearance in a non-daily run.
+
+	:charge_category:
+		rare
+
+	:max_charge:
+		1
+
+	:flags:
+		removes_word
+
+:floppy_disk:
+	:name:
+		Floppy Disk
+
+	:description:
+		Use once to save the current board and generate a new one.
+		Use again to load the saved board and overwrite the current one.
+
+	:label:
+		{:save_label: if save}
+		{:load_label: not save}
+
+	:save_label:
+		Write to disk
+
+	:load_label:
+		Load from disk
+
+	:unlock:
+		Beat the game as the Lexicographer on Cerulean Clearance in a non-daily run.
+
+	:charge_category:
+		rare
+
+	:max_charge:
+		2
+
+	:flags:
+		removes_word no_use_sound
+
+:fuel_ration:
+	:name:
+		Fuel Ration
+
+	:description:
+		+1 max charge to a selected spell.
+		Cannot target character spells or spells with an automatic charge.
+		Limited use.
+
+	:label:
+		Add max charge
+
+	:unlock:
+		Beat the game without selecting any new spells.
+
+	:banner:
+		Select a spell to modify
+
+	:charge_category:
+		limited
+
+	:max_charge:
+		2
+
+	:flags:
+		use_while_selecting
+
+:girl_chunks:
+	:name:
+		Girl Chunks
+
+	:description:
+		Convert a tile to a shimmering crit.
+
+	:label:
+		Shimmering crit
+
+	:unlock:
+		Spell a word with 2+ shimmering tiles.
+
+	:charge_category:
+		rare
+
+	:max_charge:
+		3
+
+:girl_pills:
+	:name:
+		Girl Pills
+
+	:description:
+		Convert a tile to a plastic E.
+
+	:label:
+		Plastic E
+
+	:charge_characters:
+		t
+
+	:max_charge:
+		3
+
+:gray_goo:
+	:name:
+		Gray Goo
+
+	:description:
+		Duplicate a tile, replacing another random tile.
+
+	:label:
+		Duplicate a tile
+
+	:unlock:
+		Spell a word with 2+ pairs of repeat letters.
+
+	:banner:
+		Select a tile to duplicate
+
+	:charge_category:
+		very_rare
+
+	:max_charge:
+		3
+
+:gurolaga:
+	:name:
+		Gurolaga
+
+	:description:
+		Convert a tile to a bleed double-heart.
+
+	:label:
+		Bleed ♥♥
+
+	:unlock:
+		Deal 40+ damage in a single hit.
+
+	:charge_category:
+		common
+
+	:max_charge:
+		2
+
+:sorgho_pink:
+	:name:
+		Sorgho Rose
+
+	:description:
+		Change trois tuiles en bonbons.
+		Un message adorable dans chaque paquet!
+
+	:label:
+		Message sucré
+
+	:charge_category:
+		rare
+
+	:max_charge:
+		1
+
+:ice_ix:
+	:name:
+		Ice IX
+
+	:description:
+		Convert a tile to a frozen 9 (WXYZ).
+
+	:label:
+		Frozen 9
+
+	:unlock:
+		Block 6+ damage with wildcards.
+
+	:charge_category:
+		uncommon
+
+	:exclude_characters:
+		wxyz
+
+	:max_charge:
+		3
+
+:ingsock:
+	:name:
+		INGSOCK
+
+	:description:
+		Replace the face of a tile with ING.
+
+	:label:
+		Convert to ING
+
+	:charge_category:
+		common
+
+	:exclude_characters:
+		ing
+
+	:max_charge:
+		3
+
+:jo_permit:
+	:name:
+		J/O Permit
+
+	:description:
+		Slash a tile.
+
+	:label:
+		Slash tile
+
+	:unlock:
+		Submit a slur.
+
+	:charge_characters:
+		e
+
+	:max_charge:
+		4
+
+:letter_stamp:
+	:name:
+		Letter Stamp
+
+	:description:
+		Select the left, center, or right of a tile to prepend, replace, or append the face with {face upper}.
+
+	:preview_description:
+		Select the left, center, or right to prepend, replace, or append.
+
+	:label:
+		Place {face aoran} {face upper}
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		3
+
+:lidocaine:
+	:name:
+		Lidocaine
+
+	:description:
+		Freeze the first and last tile in a spelled word.
+
+	:label:
+		Freeze sides
+
+	:charge_category:
+		rare
+
+	:max_charge:
+		3
+
+:lucky_cat:
+	:name:
+		Lucky Cat
+
+	:description:
+		Replace the face of a random tile with 7 (PQRS).
+		1/4 chance for the tile to become a crit.
+
+	:label:
+		Lucky crit 7
+
+	:unlock:
+		Roll 4+ natural crits in a single turn.
+
+	:charge_category:
+		any
+
+	:max_charge:
+		3
+
+:mba:
+	:name:
+		MBA
+
+	:description:
+		When you have a 1-3 letter word spelled, use this spell to submit it without ending your turn or gaining spell charges.
+
+	:label:
+		Submit short word
+
+	:unlock:
+		Spell a 3 letter word.
+
+	:charge_category:
+		common
+
+	:max_charge:
+		1
+
+	:flags:
+		no_use_sound immediate
+
+:modern_heart:
+	:name:
+		Modern Heart
+
+	:description:
+		Enhance a random plastic tile to concrete.
+
+	:label:
+		Random concrete
+
+	:unlock:
+		Use all tiles while the board is locked.
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		3
+
+# todo!
+:nightstick:
+	:name:
+		PDFD
+
+	:description:
+		Convert a row to plastic.
+
+	:label:
+		Plastic row
+
+	:banner:
+		Select a row to modify
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		2
+
+:nudge_right:
+	:name:
+		Nudge Right
+
+	:description:
+		Swaps the selected tile with the right tile.
+
+	:label:
+		Nudge right
+
+	:charge_category:
+		common
+
+	:max_charge:
+		4
+
+	:flags:
+		removes_word
+
+:nudge_up:
+	:name:
+		Nudge Up
+
+	:description:
+		Swaps the selected tile with the above tile.
+
+	:label:
+		Nudge up
+
+	:charge_category:
+		common
+
+	:max_charge:
+		4
+
+	:flags:
+		removes_word
+
+:panic_button:
+	:name:
+		Panic Button
+
+	:description:
+		Submit a word with x1.5 damage and defense.
+		Loses 1 charge every 20 seconds.
+
+	:label:
+		Enhance quickly
+
+	:unlock:
+		Beat the game as the Addict on Cerulean Clearance in a non-daily run.
+
+	:charge_category:
+		auto
+
+	:max_charge:
+		1
+
+	:flags:
+		discharge_on_load fixed_max_charge no_use_sound immediate
+
+:paper_shredder:
+	:name:
+		Paper Shredder
+
+	:description:
+		Remove the bottom row.
+		Repeat until all charges are used up.
+
+	:label:
+		Shred bottom row
+
+	:charge_category:
+		common
+
+	:max_charge:
+		4
+
+	:flags:
+		removes_word
+
+:party_ration:
+	:name:
+		Party Ration
+
+	:description:
+		Convert eight random tiles to candy.
+		Limited use.
+
+	:label:
+		Candy reserve
+
+	:charge_category:
+		limited
+
+	:max_charge:
+		1
+
+:party_rose:
+	:name:
+		Party Rose
+
+	:description:
+		Convert a tile to an enhanced TH.
+
+	:label:
+		Enhanced TH
+
+	:charge_category:
+		common
+
+	:exclude_characters:
+		th
+
+	:max_charge:
+		3
+
+:pentameter:
+	:name:
+		Pentameter
+
+	:description:
+		Replace the face of a tile with a 5 (JKL).
+		Charged by J, K, and L.
+
+	:label:
+		Convert to 5
+
+	:unlock:
+		Spell a 5 letter word 5 times in a row.
+
+	:charge_characters:
+		5
+
+	:max_charge:
+		3
+
+:perfect_metal_carapace:
+	:name:
+		Perfect Metal Carapace
+
+	:description:
+		Gain 99 defense.
+
+	:label:
+		Gain 99 defense
+
+	:unlock:
+		Gain 20+ defense from tiles at once.
+
+	:charge_category:
+		very_rare
+
+	:max_charge:
+		1
+
+:photocopier:
+	:name:
+		Photocopier
+
+	:description:
+		Copy a tile’s face, then paste it on another tile.
+		Can’t copy faces with wildcards.
+
+	:label:
+		Copy and paste
+
+	:banner:
+		{:copy_banner: if copy}
+		{:paste_banner: not copy}
+
+	:copy_banner:
+		Select a tile to copy
+
+	:paste_banner:
+		Select a tile to paste {face upper}.
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		4
+
+:pliers:
+	:name:
+		Pliers
+
+	:description:
+		Enhance a wooden tile to ivory.
+		Convert a random adjacent tile to bleed.
+
+	:label:
+		Ivory and bleed
+
+	:charge_characters:
+		a
+
+	:max_charge:
+		3
+
+:political_compass:
+	:name:
+		Political Compass
+
+	:description:
+		Convert a corner tile:
+		Top left to candy.
+		Top right to bomb.
+		Bottom right to money wildcard.
+		Bottom left to enhanced.
+
+	:label:
+		Convert a corner
+
+	:unlock:
+		Beat the game on Cerulean Clearance or higher in a non-daily run.
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		2
+
+:praxice:
+	:name:
+		Praxice
+
+	:description:
+		Reroll a spell. Spells obtained this way are removed from the pool.
+
+	:label:
+		Reroll spell
+
+	:unlock:
+		Beat the game as the Jubilist on Cerulean Clearance in a non-daily run.
+
+	:banner:
+		Select a spell to modify
+
+	:charge_category:
+		common
+
+	:max_charge:
+		3
+
+	:flags:
+		use_while_selecting
+
+:razor_blade:
+	:name:
+		Razor Blade
+
+	:description:
+		Double the letter of a tile and convert it to a crit.
+		Can’t double wildcards.
+
+	:label:
+		Crit double letter
+
+	:charge_category:
+		common
+
+	:max_charge:
+		3
+
+:red_letter:
+	:name:
+		Red Letter{"?" if curse "cursed"}
+
+	:description:
+		{:lexicographer: if character "lexicographer"}
+		{:jubilist: if character "jubilist"}
+		{:child: if character "child"}
+		{:fisher: if character "fisher"}
+		{:addict: if character "addict"}
+
+	:lexicographer:
+		Upgrades Ouvre-lettre to Silver Ouvre-lettre.
+		Silver Ouvre-lettre fully charges each turn, and can remove harmful statuses.
+
+	:jubilist:
+		Select a Gift to upgrade to Miracle Cache.
+		Miracle Cache transforms and recharges every turn instead of every battle.
+
+	:child:
+		Upgrades Hole Punch to Scalpel.
+		Scalpel has an additional charge each turn.
+
+	:fisher:
+		Upgrades Fishing Rod to Reinforced Fishing Rod.
+		Reinforced Fishing Rod has a slower reeling speed and can catch more fish.
+
+	:addict:
+		Upgrades Salt to Salt & Pepper.
+		Salt & Pepper bombs convert letters to their respective number, e.g. J to 5 (JKL).
+
+	:label:
+		Character upgrade{"?" if curse "cursed"}
+
+	:unlock:
+		Beat the game as the Lexicographer in a non-daily run.
+
+	:banner:
+		Select a spell to modify
+
+	:charge_category:
+		unlimited
+
+	:flags:
+		use_while_selecting curse_immune
+
+:retz:
+	:name:
+		Retz
+
+	:description:
+		Convert a tile to a mystery crit.
+
+	:label:
+		Mystery crit
+
+	:unlock:
+		Heal an inner child.
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		1
+
+:rotary_dial:
+	:name:
+		Rotary Dial
+
+	:description:
+		{:select_description: not letters}{:number_description: if letters}
+		Changes to a random number at the start of each turn.
+
+	:select_description:
+		Replace, prepend, or append the face of a tile with a number.
+
+	:number_description:
+		Replace, prepend, or append the face of a tile with a {face} ({letters list_merge upper}).
+
+	:label:
+		{:select_label: not face}
+		{:number_label: if face}
+
+	:select_label:
+		Place a number
+
+	:number_label:
+		Place a {face}
+
+	:unlock:
+		Spell a 5+ letter word using only numbers.
+
+	:charge_category:
+		common
+
+	:max_charge:
+		3
+
+:shift:
+	:name:
+		Shift
+
+	:description:
+		Convert the leftmost tile in a row to a capital crit.
+
+	:label:
+		Capital crit
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		3
+
+:shift_cipher:
+	:name:
+		Shift Cipher
+
+	:description:
+		Select the left or right side of a tile to shift its letter through the alphabet.
+
+	:preview_description:
+		Select the left or right side to shift.
+
+	:label:
+		Shift letters
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		4
+
+:six_shooter:
+	:name:
+		Six Shooter
+
+	:description:
+		5/6 chance to replace tile face with 6 (MNO).
+		1/6 chance to hole punch.
+
+	:label:
+		6 or hole punch
+
+	:unlock:
+		Beat New Cop in his second phase.
+
+	:charge_category:
+		very_common
+
+	:exclude_characters:
+		mno
+
+	:max_charge:
+		3
+
+:skinner_box:
+	:name:
+		Skinner Box
+
+	:description:
+		May convert a random tile to a crit.
+
+	:label:
+		Crit rewards
+
+	:unlock:
+		Play the game for 8 hours.
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		3
+
+:slashfic:
+	:name:
+		Slashfic
+
+	:description:
+		Slash 3 random tiles.
+
+	:label:
+		Slash tiles
+
+	:unlock:
+		Submit a word containing 3+ yuri and 3+ yaoi tiles.
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		3
+
+:snow:
+	:name:
+		Snow
+
+	:description:
+		Convert a tile to a frozen capital.
+
+	:label:
+		Frozen capital
+
+	:charge_category:
+		common
+
+	:max_charge:
+		3
+
+:sobriety_test:
+	:name:
+		Sobriety Test
+
+	:description:
+		Select the left, center, or right of a tile to shift and invert its letter through the alphabet.
+		e.g. “a” into “z”, “b” into “y”.
+
+	:preview_description:
+		Select the left, center, or right to shift.
+
+	:label:
+		Flip letters
+
+	:unlock:
+		Select 3+ cursed spells in a run.
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		3
+
+:sockpuppet:
+	:name:
+		Sockpuppet
+
+	:description:
+		Convert all wooden tiles to plastic and plastic tiles to wooden in a spelled word.
+
+	:label:
+		Swap tile type
+
+	:unlock:
+		Submit a word containing a tile with a value of 9 or higher.
+
+	:charge_category:
+		common
+
+	:max_charge:
+		2
+
+
+:stapler:
+	:name:
+		Stapler
+
+	:description:
+		Merge a tile with a tile to the left or right and convert it to a crit.
+
+	:label:
+		Merge into crits
+
+	:charge_category:
+		common
+
+	:max_charge:
+		3
+
+	:flags:
+		removes_word
+
+:taffy_hook:
+	:name:
+		Taffy Hook
+
+	:description:
+		Convert the middle tile in a spelled word with an odd number of tiles to candy.
+
+	:label:
+		Middle candy
+
+	:unlock:
+		Heal 26 health with candy in a single run.
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		2
+
+:tumor:
+	:name:
+		Tumor
+
+	:description:
+		Convert ANY tile to an enhanced 2 (ABC).
+		A random additional tile will be converted as well.
+
+	:label:
+		Enhanced 2s
+
+	:unlock:
+		Spell a 6+ letter word with 0 value.
+
+	:charge_category:
+		common
+
+	:max_charge:
+		3
+
+:twelve_gauge_clay:
+	:name:
+		12-Gauge Clay
+
+	:description:
+		Becomes a copy of another selected spell.
+
+	:label:
+		Copy other spell
+
+	:unlock:
+		Select 30 different spells.
+
+	:banner:
+		Select a spell to copy
+
+	:charge_category:
+		unlimited
+
+	:flags:
+		use_while_selecting
+
+:two_point_leading:
+	:name:
+		2-Point Leading
+
+	:description:
+		Swap the position of any two tiles.
+
+	:label:
+		Swap tiles
+
+	:banner:
+		{"Select a tile to swap" not swapping}{"Select a tile to swap with" if swapping}
+
+	:charge_category:
+		unlimited
+
+	:flags:
+		removes_word
+
+:typo:
+	:name:
+		Typo
+
+	:description:
+		Select the left or right side of a tile to shift its letter along a QWERTY keyboard.
+
+	:preview_description:
+		Select the left or right side to shift.
+
+	:label:
+		Shift letters
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		4
+
+:type_o:
+	:name:
+		Type O
+
+	:description:
+		{:typo/description:}
+
+	:preview_description:
+		{:typo/preview_description:}
+
+	:label:
+		{:typo/label:}
+
+	:charge_category:
+		{:typo/charge_category:}
+
+	:max_charge:
+		{:typo/max_charge:}
+
+:vampire_teeth:
+	:name:
+		Vampire Teeth
+
+	:description:
+		Convert two tiles to wooden candy V’s.
+
+	:label:
+		Wooden candy V’s
+
+	:unlock:
+		Let Oenone have a snack.
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		2
+
+:verification_can:
+	:name:
+		Verification Can
+
+	:description:
+		Convert 2 random tiles to candy.
+		Convert the topmost row to acid.
+
+	:label:
+		Acid and candy
+
+	:unlock:
+		Beat Dew Jubilist without any acid reaching the bottom.
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		3
+
+	:flags:
+		no_use_sound
+
+:victory_whiskey:
+	:name:
+		Victory Whiskey
+
+	:description:
+		Freeze ALL tiles on the bottom row.
+
+	:label:
+		Freeze bottom row
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		3
+
+	:flags:
+		no_use_sound
+
+:warfarin:
+	:name:
+		Warfarin
+
+	:description:
+		Randomize the face of a tile and convert it to bleed.
+
+	:label:
+		Bloody reroll
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		5
+
+:wax_stamp:
+	:name:
+		Wax Stamp
+
+	:description:
+		Becomes a letter stamp for a chosen face.
+		The face must only contain letters.
+
+	:unlock:
+		Spell an 8+ letter word with 4 tiles or fewer.
+
+	:label:
+		Pick a letter
+
+	:banner:
+		Select a tile to copy
+
+	:charge_category:
+		unlimited
+
+:wax_letter_stamp:
+	:name:
+		Wax Stamp
+
+	:description:
+		{:letter_stamp/description:}
+
+	:preview_description:
+		{:letter_stamp/preview_description:}
+
+	:label:
+		{:letter_stamp/label:}
+
+	:charge_category:
+		common
+
+	:max_charge:
+		3
+
+:hundred_cow_lead:
+	:name:
+		100 Cow Lead
+
+	:description:
+		Convert a letter to a specific bigram starting with that letter.
+
+	:label:
+		Common bigram
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		3
+
+:replacement_character:
+	:name:
+		Replacement Character
+
+	:description:
+		Convert a tile to a random wildcard.
+
+	:label:
+		Random wildcard
+
+	:charge_category:
+		random_spell
+
+:ssn:
+	:name:
+		{:username_name: if username}{"SSN" not username} {:leaderboard_label: if leaderboard}
+
+	:username_name:
+		{username}’s SSN
+
+	:description:
+		Convert a tile to {status_name aoran} {status_name lower} {number} ({letters list_merge upper}).
+		This spell is personalized; number is determined by the last valid digit of {"your" not username}{"their" if username} Steam ID.
+
+	:unlock:
+		Win a daily run.
+
+	:leaderboard_label:
+		({:label:})
+
+	:label:
+		{status_name} {number}
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		3
+
+:friends_ssn:
+	:name:
+		{:ssn/name:}
+
+	:description:
+		{:ssn/description:}
+
+	:label:
+		{:ssn/label:}
+
+	:charge_category:
+		{:ssn/charge_category:}
+
+	:max_charge:
+		{:ssn/max_charge:}
+
+:clover:
+	:name:
+		Clover
+
+	:description:
+		Merge a tile with a cardinally adjacent tile, combining their faces.
+
+	:label:
+		Merge tiles
+
+	:charge_category:
+		common
+
+	:max_charge:
+		4
+
+	:flags:
+		removes_word
+
+:fingerprints:
+	:name:
+		Fingerprints
+
+	:description:
+		Swap the faces of two tiles.
+
+	:label:
+		Swap faces
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		4
+
+:mood_screw:
+	:name:
+		Mood Screw
+
+	:description:
+		Screw the topmost tile in a column.
+
+	:unlock:
+		Submit 4+ words at once.
+
+	:label:
+		Screw a tile
+
+	:banner:
+		Select a tile to screw
+
+	:charge_characters:
+		x
+
+	:max_charge:
+		2
+
+:expired_ration:
+	:name:
+		Expired Ration
+
+	:description:
+		Apply gunk and special faces to 5 random tiles.
+		Faces may be wildcards, suits, numbers, slashes, and n-grams.
+
+	:unlock:
+		Beat the game with an unused Party Ration.
+
+	:label:
+		Random gunk
+
+	:charge_category:
+		uncommon
+
+	:max_charge:
+		2
+
+:red_tape:
+	:name:
+		Red Tape
+
+	:documentation:
+		1.
+
+		If a valid word is spelled in the word builder, and it is a slur, swear, the word “{special_word}”, or a word that has been submitted previously this run, see Section 1.1.
+
+		Otherwise, see Section 2.
+
+		1.1.
+
+		If the spelled word is a slur, convert each tile in the word builder to tarnished, then submit without ending your turn or gaining spell charges.
+
+		Otherwise, if the spelled word is a swear, convert each tile in the word builder to money.
+
+		Otherwise, if the spelled word is “{special_word}”, submit the spelled word, then see Section 1.2.
+
+		Otherwise, if the spelled word was submitted previously, if repeat words are allowed, randomly shuffle the faces of all tiles in the word builder. If repeat words are disallowed, see Section 1.3.
+
+		1.2.
+
+		If this spell has more than 3 maximum charges, set its maximum charge to 2 and fully drain its charge.
+
+		Otherwise, set its maximum charge to 4 and fully recharge it.
+
+		1.3.
+
+		Submit the spelled word.
+
+		Unless the repeated word was part of a shimmering permutation, fully drain this spell’s charge.
+
+		2.
+
+		Select a tile.
+
+		If the tile is in the first row, see Section 2.1.
+
+		Otherwise, if the tile is shimmering, see Section 2.2.
+
+		Otherwise, if the tile has a harmful status, see Section 2.3.
+
+		Otherwise, if a valid single word is spelled in the word builder, and the tile is not in the word, see Section 2.4.
+
+		Otherwise, see Section 3.
+
+		2.1.
+
+		If the first row forms one or more valid words, submit them without ending your turn or gaining spell charges.
+
+		Otherwise, shift the faces of every tile in the selected tile’s column down by 1, wrapping around at the bottom of the board.
+
+		2.2.
+
+		If every face of the tile is a single letter, convert all faces to the corresponding number.
+
+		Otherwise, if the tile is not a bomb, convert the tile to a bomb.
+
+		Otherwise, explode the tile.
+
+		2.3.
+
+		If the face is slashed, convert the slashed faces to random numbers.
+
+		If the face is a unigram, see Section 2.3a.
+
+		If the face is a bigram, see Section 2.3b.
+
+		If the face is a trigram, see Section 2.3c.
+
+		Otherwise, waste a charge.
+
+		2.3a.
+
+		If the face is a letter with a value greater than 1, set the face to a random letter with a value 1 lower.
+
+		Otherwise, if the face is a letter, set the face to a random number.
+
+		Otherwise, if the face is “*”, set the face to “null”.
+
+		Otherwise, set the face to “*”.
+
+		2.3b.
+
+		If the face contains any suits, randomize it to a similar face.
+
+		Otherwise, insert a slash between the two characters.
+
+		2.3c.
+
+		If you have been deliberating for an even number of seconds, remove the last character from the face.
+
+		Otherwise, remove the first character from the face.
+
+		2.4.
+
+		If the spelled word is 3 or less letters long, set the face to the spelled word.
+
+		Otherwise, if the face is a single letter, shift its letter through the alphabet by the length of the spelled word.
+
+		Otherwise, if the face is comprised entirely of wildcards, convert the tile to eternal.
+
+		Otherwise, randomize the face to a similar face.
+
+		3.
+
+		If the tile is wooden, see Section 3.1.
+
+		If the tile is plastic, see Section 3.2.
+
+		3.1
+
+		If there are no plastic tiles, convert the tile to plastic.
+
+		Otherwise, if the total value of all plastic tiles is less than 3, swap the face of the tile with a random plastic tile.
+
+		Otherwise, if the tile neighbors any plastic tiles, remove all neighboring plastic tiles.
+
+		Otherwise, if the board contains no crits, see Section 3.1a.
+
+		Otherwise, convert the tile to ivory.
+
+		3.1a.
+
+		If you can find crits naturally, and your current crit chance is 10% or higher, convert the tile to a crit.
+
+		Otherwise, if the board contains no bombs, convert the tile to a bomb with a 1-3 turn fuse.
+
+		Otherwise, waste a charge.
+
+		3.2
+
+		If the tile has any status, clear it and all adjacent tile’s statuses.
+
+		Otherwise, if your current health is a prime number, convert the tile to a crit.
+
+		Otherwise, if your current health is below or equal to 50% of your maximum health, convert the tile to candy.
+
+		Otherwise, if the tile is the only plastic tile on the board, convert it to concrete.
+
+		Otherwise, convert it to wood.
+
+	:description:
+		Study description.
+
+	:unlock:
+		Beat the game on Red Clearance in a non-daily run.
+
+	:label:
+		Red tape
+
+	:charge_category:
+		very_common
+
+	:max_charge:
+		3
+
+	:flags:
+		curse_immune

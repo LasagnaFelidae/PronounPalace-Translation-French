@@ -1,0 +1,492 @@
+# Start a line with # to make a comment
+# :identifier: marks a new string, strings continue until next identifier, have leading and trailing whitespace trimmed
+
+:status_tile_value:
+	X{+balance.status_added_value not balance.status_added_value 0}
+
+:plus_status_tile_value:
+	+{:status_tile_value:}
+
+:in_x_turns:
+	{:on_turn_end: if turns 1}
+	{:in_turns: not turns 1}
+
+:in_turns:
+	dans {turns} tours
+
+:on_turn_end:
+	à la fin du tour
+
+:space_statuses:
+	hole screw
+
+:position_statuses:
+	capital period
+
+:default:
+	:name:
+		{:wooden_name: if wooden}
+		{:plastic_name: if plastic}
+
+	:tile_name:
+		Tuile {:name:} 
+
+	:description:
+		{:wooden_description: if wooden}
+		{:plastic_description: if plastic}
+
+	:wooden_name:
+		Boisée
+
+	:wooden_description:
+		{+value} point{"s" if value > 1} de dégât{"s" if value > 1} une fois joué.
+
+	:plastic_name:
+		Plastique
+
+	:plastic_description:
+		{+value} point{"s" if value > 1} de défense une fois joué.
+
+	:flags:
+		spray_exempt
+
+
+:crit:
+	:name:
+		Critique
+
+	:description:
+		{:multiplier:} une fois jouée.
+		{:crit_chance_description: if show_crit_chance}
+
+	:crit_chance_description:
+		Le pourcentage de chance d'apparition des Crits est équivalent à la longueur des mots épelés.
+
+	:multiplier:
+		{:damage_multiplier: if wooden}
+		{:defense_multiplier: if plastic}
+		{:generic_multiplier: not wooden|plastic}
+
+	:damage_multiplier:
+		x{balance.crit_value} Dégats
+
+	:defense_multiplier:
+		x{balance.crit_value} Défense
+
+	:generic_multiplier:
+		x1.5 points de dégats ou défense
+
+	:flags:
+		positive no_target
+
+:spicy:
+	:name:
+		Brûlante
+
+	:description:
+		Deviens une tuile charbon a la fin du tour.
+
+	:flags:
+		 neutral
+
+:coal:
+	:name:
+		Charbon
+
+	:tile_name:
+		Tuile Charbon
+
+	:description:
+		{"Ne peut être jouée" not space}
+		La tuile disparaît {:in_x_turns: with turns coal_turns|balance.coal_turns}.
+
+	:flags:
+		faceless override_default_title spray_destroys neutral
+
+:acid:
+	:name:
+		Acide
+
+	:description:
+		Supprime la tuile en dessous d'elle à la fin du tour.
+		Tombe de la grille et cause {status_value|:status_tile_value:} point{"s" if status_value > 1} de dégât{"s" if status_value > 1} direct{"s" if status_value > 1} si elle atteint la dernière ligne.
+
+	:flags:
+		harmful
+
+:bruise:
+	:name:
+		Abîmée
+
+	:description:
+		 Tous les dégats augmentent de {+status_value|:plus_status_tile_value:} point{"s" if status_value >= 2} si ils ne sont pas complètement bloqués.
+
+	:flags:
+		harmful
+
+:ash:
+	:name:
+		Cendrée
+
+	:description:
+		La tuile disparaît à la fin du tour.
+
+	:flags:
+		destroy_on_turn_end neutral
+
+:bleed:
+	:name:
+		Saignante
+
+	:description:
+		{+balance.bleed_damage} point{"s" if balance.bleed_damage >= 2} de dégât{"s" if balance.bleed_damage >= 2} si non-jouée, sans prendre en compte la valeur de la tuile.
+
+	:flags:
+		harmful
+
+:period:
+	:name:
+		Point
+
+	:description:
+		Doit être la dernière tuile d'un mot.
+
+	:exclusive_with:
+		{:position_statuses:}
+
+	:flags:
+		shared no_faceless_effect face_status
+
+:capital:
+	:name:
+		Majuscule
+
+	:description:
+		Doit être la première tuile d'un mot.
+
+	:exclusive_with:
+		{:position_statuses:}
+
+	:flags:
+		shared no_faceless_effect face_status
+
+:frozen:
+	:name:
+		Gelée
+
+	:description:
+		{:default/wooden_description: if plastic}{:default/plastic_description: if wooden}
+		Compte pour l'attaque et la défense.
+		Le statut est retiré à la fin du tour.
+
+	:flags:
+		no_faceless_effect positive
+
+:poison:
+	:name:
+		Empoisonnée
+
+	:description:
+		{+status_value|:plus_status_tile_value:} point{"s" if status_value >= 2} de dégât{"s" if status_value >= 2} si non-jouée
+		La tuile disparaît à la fin du tour.
+
+	:flags:
+		harmful destroy_on_turn_end
+
+:gay:
+	:name:
+		{:generic_name: not wooden|plastic}
+		{:yuri_name: if wooden}
+		{:yaoi_name: if plastic}
+
+	:description:
+		{:generic_description: not wooden|plastic}
+		{:yuri_description: if wooden}
+		{:yaoi_description: if plastic}
+
+	:generic_name:
+		Gay
+
+	:generic_description:
+		Les tuiles Yaoi et Yuri ne peuvent pas être envoisinées.
+		Les tuiles disparaîssent à la fin du tour.
+
+	:yuri_name:
+		Yuri
+
+	:yuri_description:
+		Ne peut pas être jouée à coté des tuiles Yaoi.
+		La tuile disparaît à la fin du tour.
+
+	:yaoi_name:
+		Yaoi
+
+	:yaoi_description:
+		Ne peut pas être jouée à coté des tuiles Yuri.
+		La tuile disparaît à la fin du tour.
+	:flags:
+		destroy_on_turn_end type_unique_status neutral
+
+:linked:
+	:name:
+		Enchaînée
+
+	:description:
+		{:color_description: if linked_color}{:colorless_description: not linked_color}
+		Le statut est retiré {:in_x_turns: with turns linked_turns|balance.linked_turns}.
+
+	:color_description:
+		Toutes les tuiles enchaînées {linked_color} doivent être jouées ensemble.
+
+	:colorless_description:
+		Toutes les tuiles enchaînées avec une couleur assortie doivent être jouées ensemble.
+
+	:flags:
+		shared
+
+:candy:
+	:name:
+		Bonbon
+
+	:description:
+		{+value} PV une fois jouée.
+
+	:flags:
+		no_faceless_effect positive
+
+:bomb:
+	:name:
+		Bombe
+
+	:description:
+		Explose {:in_x_turns: with turns bomb_turns}, causant {status_value|:bomb_value:} point{"s" if status_value >= 2} de dégât{"s" if status_value >= 2}.
+		{:crit/multiplier:} si jouée{" si 1 tour restant" not bomb_turns 1}.
+		Explose si retirée.
+
+	:bomb_value:
+		{balance.bomb_multiplier}X
+
+	:flags:
+		harmful
+
+:enhanced:
+	:name:
+		{:generic_name: not wooden|plastic}
+		{:ivory_name: if wooden}
+		{:concrete_name: if plastic}
+
+	:description:
+		{:generic_description: not wooden|plastic}
+		{:ivory_description: if wooden}
+		{:concrete_description: if plastic}
+
+	:generic_name:
+		Améliorée
+
+	:generic_description:
+		+1 valeur de tuile.
+
+	:ivory_name:
+		Ivoirée
+
+	:ivory_description:
+		Améliorée. +1 valeur de tuile.
+
+	:concrete_name:
+		Bétonnée
+
+	:concrete_description:
+		Améliorée. +1 valeur de tuile.
+
+	:flags:
+		no_faceless_effect type_unique_status positive
+
+:cursed:
+	:name:
+		Maudite
+
+	:description:
+		{+status_value|:plus_status_tile_value:} {+status_value|:plus_status_tile_value:} point{"s" if status_value >= 2} de dégât{"s" if status_value >= 2} si non-jouée.
+		Ne peut être retirée.
+
+	:flags:
+		harmful indestructible
+
+:poop:
+	:name:
+		Emmerdée
+
+	:description:
+		La valeur de la tuile est nulle.
+		Le statut disparaît à la fin du tour.
+
+	:flags:
+		no_faceless_effect neutral
+
+:money:
+	:name:
+		Friquée
+
+	:description:
+		La valeur de la tuile est nulle.
+
+	:flags:
+		no_faceless_effect neutral
+
+:mystery:
+	:name:
+		Mystère
+
+	:description:
+		La façe de la tuile est inconnue.
+		{:generic_hint: not tile}{:letter_hint: if faces}
+
+	:generic_hint:
+		Jusqu'à {balance.mystery_options} options possibles seront révélé dans l'indice de la tuile.
+
+	:letter_hint:
+		Peut être:
+		[center]{faces list_or upper}[/center]
+
+	:flags:
+		shared no_faceless_effect face_status clear_on_face_change
+
+:haze:
+	:name:
+		Embrumée
+
+	:description:
+		{+balance.bleed_damage} {+status_value|:plus_status_tile_value:} point{"s" if status_value >= 2} de dégât{"s" if status_value >= 2} si non-jouée, peu importe la valeur de la tuile
+		Se disperse toutes les {balance.haze_time} secondes.
+		La tuile disparaît à la fin du tour.
+
+	:flags:
+		harmful
+
+:eternal:
+	:name:
+		Éternelle
+
+	:description:
+		{+status_value|:plus_status_tile_value:} point{"s" if status_value >= 2} de dégât{"s" if status_value >= 2} si non-jouée.
+		Retourne dans la grille une fois jouée.
+		Ne peut être retirée. La tuile disparait à la fin du combat.
+
+	:flags:
+		harmful indestructible stays_when_submitted
+
+:gunk:
+	:name:
+		Crasseuse
+
+	:description:
+		La tuile est inamovible.
+
+	:flags:
+		prevents_falling neutral
+
+:hole:
+	:name:
+		Trou
+
+	:tile_name:
+		Tuile Trouée
+
+	:description:
+		Compte comme un espace; Peut être utilisée pour soumettre plusieurs mots.
+
+	:exclusive_with:
+		{:space_statuses:}
+
+	:flags:
+		shared space faceless face_unmodifiable override_default_title spray_exempt priority_99
+
+:screw:
+	:name:
+		Visse
+
+	:tile_name:
+		Tuile Vissée
+
+	:description:
+		La tuile est inamovible.
+		{:hole/description: if screw_turns|balance.screw_turns 0}{:screw_description: not screw_turns|balance.screw_turns 0}
+
+	:screw_description:
+		Va devenir un espace {:in_x_turns: with turns screw_turns|balance.screw_turns}.
+
+	:exclusive_with:
+		{:space_statuses:}
+
+	:flags:
+		prevents_falling shared faceless face_unmodifiable override_default_title spray_exempt priority_99
+
+# Non-status effects
+:wildcard:
+	:name:
+		Joker
+
+	:description:
+		Les jokers sont toujours la meilleure lettre possible.
+		{:wildcard_chance_description: if show_wildcard_chance}
+
+	:wildcard_chance_description:
+		Le pourcentage de chance d'apparition des Jokers est équivalent à la longueur des mots épelés.
+
+:number:
+	:name:
+		Nombre
+
+	:description:
+		{:specific_description: if number}
+		{:generic_description: not number}
+
+	:specific_description:
+		{number} peut être utilisé en tant que {letters list_or upper}.
+
+	:generic_description:
+		Les nombres peuvent être n'importe quelle lettre indiquée sur leur tuile T9.
+		Les nombres sont toujours la meilleure lettre possible..
+
+:suit:
+	:name:
+		Couleur
+
+	:description:
+		Les couleurs sont des jokers.
+		Les couleurs de la même sorte dans le même mot doivent être la même lettre.
+
+:slashed:
+	:name:
+		Fendue
+
+	:description:
+		{:specific_description: if faces}
+		{:generic_description: not faces}
+
+	:specific_description:
+		Peut être utilisée comme {faces list_or upper}.
+
+	:generic_description:
+		Peut être utilisée comme l'une des deux lettres.
+
+
+:shimmering:
+	:name:
+		Scintillante
+
+	:description:
+		La tuile à plusieures façes.
+		Chaque permutation des façes doivent former un mot.
+
+:bigram:
+	:name:
+		Bigramme
+
+:trigram:
+	:name:
+		Trigramme
+
+:suffix:
+	:name:
+		Suffixe

@@ -1,0 +1,185 @@
+# Start a line with # to make a comment
+# :identifier: marks a new string, strings continue until next identifier, have leading and trailing whitespace trimmed
+
+# Menu strings
+
+:act_0:
+	:title:
+		Premier Acte
+
+	:subtitle:
+		La Banlieue
+
+:act_1:
+	:title:
+		Second Acte
+
+	:subtitle:
+		Le Parti
+
+:act_2:
+	:title:
+		Troisième Acte
+
+	:subtitle:
+		Le Palais
+
+:spell_select_label:
+Selectionne un sort
+
+:versus_label:
+{character} contre {enemy}
+
+:linked_color:
+	:gray:
+		gris
+
+	:silver:
+		argent
+
+	:rusty:
+		rouillé
+
+	:cobalt:
+		cobalt
+
+	:oxidized:
+		oxidé
+
+	:gold:
+		doré
+
+:restock_lock:
+	:title:
+		Bloqué
+
+	:description:
+		Pas de réapprovisionnement de tuiles jusqu'à la fin du tour.
+
+:tile_slot:
+	:title:
+		{:normal_title: if multiplier 1}
+		{:special_title: not multiplier 1}
+
+	:normal_title:
+		Emplacement de Tuile
+
+	:special_title:
+		Emplacement {"Negatif" if negative}{"Piquant" if spiked}{"Multiplicateur" not negative|spiked} de Tuile 
+
+	:description:
+		{:special_description: not multiplier 1}
+		Limite la quantité de tuiles jouables.
+
+	:special_description:
+		{:negative_description: if negative}{:spiked_description: if spiked}{:multiplier_description: not negative|spiked}
+
+	:multiplier_description:
+		x{multiplier} la valeur de la tuile.
+
+	:negative_description:
+		{:negative_multiplier_description: not multiplier -1}{"Valeur de tuile négative" if multiplier -1}
+
+	:negative_multiplier_description:
+		{multiplier}x la valeur de la tuile.
+
+	:spiked_description:
+		Prends des dégâts équivalents à la valeur de la tuile.
+
+:icon_labels:
+	:submit:
+		Soumettre
+
+	:reroll:
+		Relancer
+
+	:reroll_confirm:
+		Terminer le tour?
+
+	:pause:
+		Menu
+
+:dna_tweezers:
+	:confirm:
+		{"Annuler" not confirmable}{"Confirmer" if confirmable}
+
+	:reset:
+		Réinitialiser
+
+	:turns_remaining:
+		Tours restants
+
+:passcode:
+	[wave amp=5.0 freq=3]Mot de passe: {passcode upper}[/wave]
+
+:passcode_invalid:
+	MOT DE PASSE INVALIDE
+
+:word_warnings:
+	:text:
+		[wave amp=5.0, freq=3]{warning}[/wave]
+
+	:invalid_word:
+		{:invalid_known_word: if word}{:invalid_unknown_word: not word}
+
+	:invalid_known_word:
+		“{word capital}” n'est pas un mot commun!
+
+	:invalid_unknown_word:
+		Ceci n'est pas un mot!
+
+	:repeat_word:
+		{:repeat_known_word: if word}{:repeat_unknown_word: not word}
+
+	:repeat_known_word:
+		“{word}” a déjà été joué cette partie
+
+	:repeat_unknown_word:
+		Ce mot a déjà été joué cette partie
+
+	:period:
+		Les points doivent être à la fin d'un mot
+
+	:capital:
+		Les majuscules doivent être au début d'un mot
+
+	:straight:
+		Les tuiles Yuri et Yaoi ne peuvent pas être adjacentes
+
+	:linked:
+		{invalid_linked} tuile{invalid_linked plural s} liée{invalid_linked plural s} manquante{invalid_linked plural s}
+
+	:mystery:
+		Les tuiles Mystères ne forment pas un mot valide
+
+:new_word:
+	Nouveau mot!
+
+:new_word_slur:
+	Nouveau mot...
+
+# match steam tokens to try and reuse as much as possible for discord vs steam
+:rich_presence:
+	:main_menu:
+		Main Menu
+
+	:in_daily:
+		{character} vs {enemy} (Daily)
+
+	:in_run:
+		{character} vs {enemy} ({difficulty})
+
+	:game_over:
+		{character} Died to {enemy} ({difficulty_or_daily})
+
+	:game_over_enemyless:
+		{character} Died ({difficulty_or_daily})
+
+	:victory:
+		{character} Victory ({difficulty_or_daily})
+
+	:in_leaderboard:
+		Leaderboard
+
+	:in_phonebook:
+		Phonebook

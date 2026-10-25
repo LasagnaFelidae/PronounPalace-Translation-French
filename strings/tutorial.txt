@@ -1,0 +1,133 @@
+:tutorial:
+	Tutoriel
+
+:first_turn:
+	::
+		:line:
+			Bon, il est temps de
+			te montrer les bases!
+
+		:flags:
+			disable_game_action hide_intent
+
+	::
+		Je suis un ennemi.
+		Épele des mots pour me battre.
+
+	::
+		Les tuiles en bois font des dégâts.
+		Les tuiles en plastique permettent de se défendre.
+
+	::
+		À noter: La défense n'est pas réduite
+		quand on prends des dégâts.
+
+	::
+		:line:
+			Tu vois l'icône au-dessus de moi?
+			Essaie de mettre ton curseur dessus.
+
+		:flags:
+			hover_intent show_intent
+
+	::
+		Et oui, je vais claquer
+		tes stupides binocles
+		hors de ta face!
+
+	::
+		Vu que je vais te causer 1 point
+		de dégât trois fois, tu n'auras besoin
+		que de 1 point de défense.
+
+	::
+		:line:
+			Bon, essaie d'épeler un mot
+			qui vaut 1 point de défense!
+
+		:flags:
+			enable_game_action
+
+:second_turn:
+	::
+		:line:
+			Mrriaouch, tonton!
+			Miaou mrrrp.
+
+		:alt:
+			::
+				Woah putain! Je vois la sueur
+				briller sur ta future calvasse.
+
+			::
+				C'est qui le crétin qui à gâché sa défense sans me faire mal? C'est toi!
+
+			::
+				Sérieux? C'est le mieux que tu puisses faire?
+				Tu m'as même pas frôlé la fourrure!
+
+			::
+				Bon, tu n'avais pas besoin 
+				d'autant de défense.
+				Au moins, t'es encore vivant!
+
+			::
+				Bon, j'aurai personellement utilisé 
+				une tuile en plastique pour défendre mais bon...
+				Qui suis-je pour te dire quoi faire?
+
+		:flags:
+			alt_almost_killed alt_no_hit_defense_wasted alt_no_hit alt_over_defended alt_no_defense disable_game_action hide_intent
+
+	::
+		Hihi. Bon restons sérieux,
+		une dernière chose:
+
+	::
+		:line:
+			Tu vois le sort en bas à gauche? Utilise ça pour retirer des tuiles.
+
+		:flags:
+			add_spell
+
+	::
+		:line:
+			Utilise ton Ouvre-lettre pour te débarasser
+			de cette immonde lettre {letter upper}!
+
+		:flags:
+			letter_opener enable_spells
+
+	::
+		:line:
+			Ouf! Je pense que
+			j'ai failli gerber!
+
+		:alt:
+			Mhm ouais, retire tes
+			bonnes lettres...
+
+		:flags:
+			alt_wrong_remove disable_spells
+
+	::
+		Comme indice, tu peux voir
+		les prochaines tuiles qui vont tomber
+		sur le dessus de la grille.
+	::
+		Ah, ton Ouvre-lettre à une utilisation manquante maintenant. Tu vois les petits carrés contenant la lettre E?
+
+	::
+		Essaie d'épeler un mot contenant un E pour recharger ton sort!
+
+	::
+		Ou pas! J'en ai plus rien à foutre
+		désormais. Je t'ai enseigné tout
+		ce que je savais.
+
+	::
+		:line:
+			Je vais te mordre maintenant, en garde!
+
+		:flags:
+			end_tutorial enable_game_action show_intent set_viewed_tutorial

@@ -1,0 +1,245 @@
+:locked:
+Bloqué
+
+:unlocked_name:
+	{achievement} débloqué
+
+:lexicographer_max_difficulty:
+	:name:
+		Détransitionne, Bébé
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		{"Bats le jeu sous Autorisation Rouge avec le Lexicographe dans une partie non-quotidienne." not trans}
+		{"Bats le jeu sous Autorisation Rouge avec la Lexicographe dans une partie non-quotidienne." if trans}
+
+:jubilist_max_difficulty:
+	:name:
+		Praxis en Action
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		{"Bats le jeu sous Autorisation Rouge avec la Jubiliste dans une partie non-quotidienne." not trans}
+		{"Bats le jeu sous Autorisation Rouge avec lae Jubiliste dans une partie non-quotidienne." if trans}
+
+:child_max_difficulty:
+	:name:
+		Bien Irréversible
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		Bats le jeu sous Autorisation Rouge avec l'Enfant dans une partie non-quotidienne.
+
+:fisher_max_difficulty:
+	:name:
+		Point Marin
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		{"Bats le jeu sous Autorisation Rouge avec la Pêcheuse dans une partie non-quotidienne." if trans}
+		{"Bats le jeu sous Autorisation Rouge avec le Pêcheur dans une partie non-quotidienne." not trans}
+
+:addict_max_difficulty:
+	:name:
+		L'un des bons
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		Finis une partie sous Autorisation Rouge avec l'Addict
+		dans une partie non-quotidienne.
+
+:unlock_child:
+	:name:
+		L'Enfant
+
+	:unlock_name:
+		Débloque l'Enfant
+
+	:unlock:
+		{:locked_unlock: if locked}
+		{:revealed_unlock: not locked}
+
+	:revealed_unlock:
+		{:alternate_unlock: if alternate_unlock}
+		{:normal_unlock: not alternate_unlock}
+
+	:locked_unlock:
+		Perds une partie ou bats le jeu avec les autres persos.
+
+	:normal_unlock:
+		Perds une partie.
+
+	:alternate_unlock:
+		Bats le jeu avec tous les autres personnages sans mourir.
+
+:unlock_jubilist:
+	:name:
+		{"La Jubiliste" not trans}
+		{"Lae Jubiliste" if trans}
+
+	:unlock_name:
+		{"Débloque la Jubiliste" not trans}
+		{"Débloque lae Jubiliste" if trans}
+
+	:unlock:
+		Finis une partie.
+
+:unlock_fisher:
+	:name:
+		{"La Pêcheuse" if trans}
+		{"Le Pêcheur" not trans}
+
+	:unlock_name:
+		{"Débloque la Pêcheuse" if trans}
+		{"Débloque le Pêcheur" not trans}
+
+	:unlock:
+		Épèle un mot de 10 lettres où plus.
+
+:unlock_addict:
+	:name:
+		L'Addict
+
+	:unlock_name:
+		Débloque l'Addict
+
+	:unlock:
+		Finis une partie en moins de 45 minutes.
+
+:beat_friends_daily:
+	:name:
+		Système pyramidal
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		Bats le score de deux de tes amis dans une p. quotidienne.
+
+:first_run:
+	:name:
+		Enquête de Recensement
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		Lance ta première partie.
+
+:quality_of_life_adjustment:
+	:name:
+		Ajustement de Qualité de Vie
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		Épèle 500 mots uniques.
+		Sais quand tu épèles un nouveau mot!
+
+:linguistic_drift:
+	:name:
+		Dérive linguistique
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		Épèle “alright” correctement.
+
+:unlock_act_1_champions:
+	:name:
+		Ombres du Premier Acte
+
+	:unlock:
+		Bat tous les ennemis de la Banlieue.
+
+:unlock_act_2_champions:
+	:name:
+		Ombres du Second Acte
+
+	:unlock:
+		Bat tous les ennemis du Parti.
+
+:unlock_act_3_champions:
+	:name:
+		Ombres du Troisième Acte
+
+	:unlock:
+		Bat tous les ennemis du Palais.
+
+:read_full_phonebook:
+	:name:
+		Le dossier se constitue
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		Lis toutes les entrées de l'annuaire.
+
+:good:
+	:name:
+		Mention Bien
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		Bat le jeu avec tous les personnages dans une partie non-quotidienne.
+
+
+:plusgood:
+	:name:
+		Mention Très Bien
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		Bat le jeu sous Autor. Céruléene avec tous les persos dans une p. non-quotidienne.
+
+
+:doubleplusgood:
+	:name:
+		Félicitations du Jury
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		Complète le jeu à 100%.
+
+:pee_your_pants:
+	:name:
+		Vengeance des Cinq Shurikens
+
+	:unlock_name:
+		{:name:}
+
+	:unlock:
+		Meurs via un disque doré.
+
+:pronouns:
+	:title:
+		Pronoms Débloqués!
+
+	:pronouns:
+		{pronouns upper}
+
+:hazel_pronouns:
+	:title:
+		Pronoms Débloqués! Encore!
+
+	:pronouns:
+		{pronouns upper}

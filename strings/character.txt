@@ -1,0 +1,193 @@
+:default:
+	:select_title:
+		{:title:}
+
+:lexicographer: {inherits :default:}
+	:title:
+		{"La" if trans}{"Le" not trans} {"Lexicographe" not global.steam_inactive}{"Lexicograrrphe" if global.steam_inactive}
+
+	:name:
+		{"Wryn Nguyen" if trans}{"Wilson Nguyen" not trans}
+
+	:description:
+		Un{"e" if trans} dissident{"e" if trans} privé{"e" if trans} du Parti.
+		Compile professionnellement des dictionnaires simplifiés.
+
+	:spell_description:
+		Retire des tuiles de la grille.
+
+	:info_title:
+		Info
+
+	:info:
+		L'expérience par défaut.
+
+	:sex:
+		{"F" if trans}{"H" not trans}
+
+	:pronouns:
+		elle
+
+	:height:
+		1m78
+
+	:weight:
+		{"65.3kg" if trans}{"64.4kg" not trans}
+
+	:occupation:
+		BUROINFO
+
+	:credit:
+		Cadence Petersen
+
+:child: {inherits :default:}
+	:title:
+		L'Enfant
+
+	:name:
+		{"Guy Young" if trans}{"Ashleigh Young" not trans}
+
+	:description:
+		La propriété de deux parents{"" if trans}{" aimants" not trans}.
+		A fait une décision non-autorisée à son propre corps.
+
+	:spell_description:
+		Joue plusieurs mots via des espaces.
+
+	:info_title:
+		Info
+
+	:info:
+		Moins de PV et taux de Crits nul.
+
+	:sex:
+		{"H" if trans}{"F" not trans}
+
+	:pronouns:
+		il
+
+	:height:
+		{"1m80" if trans}{"1m50" not trans}
+
+	:weight:
+		{"32.6kg" if trans}{"30.8kg" not trans}
+
+	:occupation:
+		N/A
+
+	:credit:
+		B.
+
+:jubilist: {inherits :default:}
+	:title:
+		La{"e" if trans} Jubiliste
+
+	:name:
+		{"V" if trans}{"Vivian Quynh" not trans}
+
+	:description:
+		Membre d'un groupe resistant vague et désorganisé.
+		Etablis le praxis grâce à l'individualisme.
+
+	:spell_description:
+		Les sorts changent à chaque combat.
+
+	:info_title:
+		Info
+
+	:info:
+		Choisis entre multiples catégories de sorts.
+
+	:sex:
+		{"X" if trans}{"F" not trans}
+
+	:pronouns:
+		iel
+
+	:height:
+		1m85
+
+	:weight:
+		{"64.8kg" if trans}{"64.4kg" not trans}
+
+	:occupation:
+		BURODOC
+
+	:credit:
+		Hazel Fackler
+
+:fisher: {inherits :default:}
+	:title:
+		L{"a" if trans}{"e" not trans} Pêcheu{"se" if trans}{"r" not trans}
+
+	:name:
+		{"Leslie Stone" if trans}{"William Stone" not trans}
+
+	:description:
+		{"Une fileyeuse" if trans}{"Un fileyeur" not trans} polyvalent{"e" if trans} et mobile.
+		Déterminé{"e" if trans} à rejoindre la classe bureaucratique.
+
+	:spell_description:
+		Pêche des tuiles.
+
+	:info_title:
+		Info
+
+	:info:
+		Moins de tuiles dans la grille, pêche le reste.
+
+	:sex:
+		{"F" if trans}{"H" not trans}
+
+	:pronouns:
+		elle/ielle
+
+	:height:
+		1m72
+
+	:weight:
+		{"72.5kg" if trans}{"71.6kg" not trans}
+
+	:occupation:
+		LIMESTOCK S.A.R.L.
+
+	:credit:
+		redoplus
+
+:addict: {inherits :default:}
+	:title:
+		L'Addict{"e" not trans}
+
+	:name:
+		{"Valence [img align=center,center width=30 height=1.2em]res://arte/ui/redact.png[/img]" if trans}{"Martha [img align=center,center width=38 height=1.2em]res://arte/ui/redact.png[/img]" not trans}
+
+	:description:
+		Un{"e" not trans} membre déshonoré{"e" not trans} du Parti Profond.
+		Fièrement {"divorcé" if trans}{"mariée" not trans}.
+
+	:spell_description:
+		Ajoute des bombes et accélère le temps.
+
+	:info_title:
+		Info
+
+	:info:
+		2 minutes par tour. Jokers à la place de Crits.
+
+	:sex:
+		{"M" if trans}{"F" not trans}
+
+	:pronouns:
+		il/lui
+
+	:height:
+		{"1m67" not trans}{"[img align=center,center width=13 height=1.2em]res://arte/ui/redact.png[/img]" if trans}
+
+	:weight:
+		{"60.8kg" if trans}{"61.7kg" not trans}
+
+	:occupation:
+		[img align=center,center width=70% height=1.2em]res://arte/ui/redact.png[/img]
+
+	:credit:
+		RENREN

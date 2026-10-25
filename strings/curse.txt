@@ -1,0 +1,87 @@
+# Start a line with # to make a comment
+# :identifier: marks a new string, strings continue until next identifier, have leading and trailing whitespace trimmed
+
+# Curse tooltips
+
+:fragile:
+	:name:
+		Fragile
+
+	:description:
+		20% de chance de perdre 1 charge max. par utilisation.
+
+:esoteric:
+	:name:
+		Ésoterique
+
+	:description:
+		La lettre de charge change à chaque tour.
+
+:nostalgic:
+	:name:
+		Nostalgique
+
+	:description:
+		Prends 3 points de dégâts non-léthal si non-sélectionné.
+
+:rusty:
+	:name:
+		Rouillé.e
+
+	:description:
+		La lettre de charge est moins commune.
+		E.g. A -> C.
+
+:censored:
+	:name:
+		Censuré.e
+
+	:redacted:
+		EXPURGÉ
+
+	:description:
+		???
+
+:laced:
+	:name:
+		Trafiqué.e
+
+	:description:
+		Prends 1 point de dégâts non-léthal à la fin du tour si il reste une charge et n'a pas été utilisé ce tour.
+
+:shiny:
+	:name:
+		Brillant.e
+
+	:description:
+		Remplace un sort au hazard (excepté ceux spécifiques au personnage).
+
+:cursed:
+	:name:
+		Maudit.e
+
+	:description:
+		{:letter_opener: if id "letter_opener"}{:letter_opener: if id "silver_letter_opener"}
+		{:hole_punch: if id "hole_punch"}{:hole_punch: if id "scalpel"}
+		{:gift: if id "gift_enhancing"}{:gift: if id "miracle_cache_enhancing"}
+		{:fishing_rod: if id "fishing_rod"}{:fishing_rod: if id "reinforced_fishing_rod"}
+		{:salt: if id "salt"}{:salt: if id "salt_and_pepper"}
+		{:red_letter: if id "red_letter"}
+
+	:letter_opener:
+		Les tuiles non-crit qui tombent après avoir retiré une tuile deviennent maudites.
+
+	:hole_punch:
+		Les tuiles trouées crées sont maudites.
+
+	:gift:
+		Aucune catégorie.
+
+	:fishing_rod:
+		Des poissons maudits vont charger sur ton hameçon.
+
+	:salt:
+		Pour les secondes finissant en 0, maudit une tuile au hazard à la place de créer une bombe.
+
+	:red_letter:
+		Amélioration maudite.

@@ -1,0 +1,361 @@
+:main:
+	:play:
+		Jouer
+
+	:phonebook:
+		Annuaire
+
+	:extras:
+		Extras
+
+	:settings:
+		Paramètres
+
+	:quit:
+		Quitter
+
+	:new_run:
+		Nouvelle
+		partie
+
+	:continue:
+		Continuer
+
+	:mods_incompatible:
+		Mods incompatibles!
+
+	:daily:
+		Quotidien
+
+	:daily_updating:
+		Chargement...
+
+	:daily_friends:
+		{count} ami.e{count plural .s} {count single a}{count plural ont} joué{count plural s}!
+
+	:daily_mods:
+		Mods activés!
+
+	:daily_mods_warning:
+		Lancer une quotidienne avec des mods?
+
+	:modded:
+		Moddé
+
+	:daily_old_version:
+		Cette quotidienne est pour une version antérieure.
+
+	:leaderboard:
+		Classement
+
+	:leaderboards:
+		Classements
+
+	:unlocks:
+		Extras
+
+	:stats:
+		Statistiques
+
+	:cutscenes:
+		Cinématiques
+
+	:saves:
+		Sauvegardes
+
+	:back:
+		Retour
+
+:character_select:
+	:start:
+		Démarrer
+
+	:seed:
+		Séquence
+
+	:random:
+		Au hazard
+
+	:disables_unlocks:
+		Empêche le débloquage de sorts!
+
+	:win_streak:
+		Série de Victoires
+
+	:unknown:
+		???
+
+	:locked:
+		Bloqué
+	:name:
+		NOM
+
+	:sex:
+		SEXE
+
+	:height:
+		TAILLE
+
+	:weight:
+		POIDS
+
+	:occupation:
+		OCCUPATION
+
+:settings:
+	:general:
+		Général
+
+	:game:
+		Jeu
+
+	:controls:
+		Contrôles
+
+	:fullscreen:
+		Plein écran
+
+	:resolution:
+		Résolution
+
+	:monitor:
+		Écran
+
+	:max_fps:
+		IPS maximum
+
+	:unlimited:
+		Illimité
+
+	:music:
+		Musique
+
+	:sound:
+		Effets sonores
+
+	:screenshake:
+		Tremblements d'écran
+
+	:menu_shake:
+		Tremblements du menu
+
+	:timer:
+		Chronomètre
+
+	:timer_off:
+		Désactivé
+
+	:timer_battle:
+		Combat
+
+	:timer_speedrun:
+		Speedrun
+
+	:skip_repeat_dialogue:
+		Passer les dialogues déjà vus
+
+	:show_crit_chance:
+		Afficher le taux de Crits
+
+	:spell_completion_ribbons:
+		Rubans de Achèvement de Sorts
+
+	:pixel_perfect:
+		Au Pixel Près
+
+	:disable_unlocks:
+		Desactiver le débloquage de sorts
+
+	:hide_default_tile_tooltips:
+		Cacher les infos des tuiles basiques
+
+	:spell_gamepad_layout:
+		Disposition de manette
+
+	:gamepad_layout_0:
+		ABXY
+
+	:gamepad_layout_1:
+		XYBA
+
+	:vibration:
+		Vibration
+
+	:gamepad_prompts:
+		Prompts de manette
+
+	:cursor_scale:
+		Taille du curseur
+
+	:auto:
+		Auto
+
+	:hide_steam_info:
+		Cacher les infos Steam
+
+	:seed:
+		Séquence: {seed}
+
+	:unlocks_disabled:
+		{:menu: if menu}{:daily: if daily}{:seeded: if seeded}{:generic: not daily|seeded|menu}
+
+		:menu:
+			Succès désactivés.
+
+		:generic:
+			Succès désactivés pour cette partie.
+
+		:daily:
+			Succès désactivés pour les quotidiennes.
+
+		:seeded:
+			Succès désactivés pour cette partie séquencées.
+
+:save_select:
+	:rename:
+		Renommer
+
+	:rename_save:
+		Renommer sauvegarde
+
+	:duplicate:
+		Dupliquer
+
+	:delete:
+		Supprimer (Maintenir)
+
+	:confirm:
+		Confirmer
+
+	:cancel:
+		Annuler
+
+	:new_save:
+		Nouvelle Sauvegarde
+
+	:corrupt_save:
+		{"Partiellement " not fully_corrupt}Corrompue
+
+	:corrupt_list:
+		({failed_to_load list_delim ", "})
+
+:leaderboard:
+	:daily_title:
+		{month}/{day}/{year}
+
+	:global:
+		Global
+
+	:friends:
+		Amis
+
+	:toggle_global:
+		Basculer Global
+
+	:toggle_friends:
+		Basculer Amis
+
+	:loading:
+		Chargement...
+
+	:no_entries:
+		Pas d'entrés! :(
+
+	:no_friends:
+		Pas d'amis! :(
+
+	:unavailable:
+		Connection à Steam échouée!
+
+	:turns:
+		Tours
+
+	:damage_taken:
+		{:summary/leaderboard_entry/lost_description: if lost}
+		{"Dégâts pris" not lost}
+
+	:rank:
+		{"#"}{rank}
+
+	:time_taken:
+		Temps passé
+
+	:longest_word:
+		Mot le plus long
+
+:stats:
+	:general:
+		Général
+
+	:spell:
+		Sort
+
+	:times_taken:
+		Pris
+
+	:times_found:
+		Trouvé
+
+	:times_used:
+		Utilisé
+
+	:times_won_with:
+		Gagné avec
+
+	:highest_difficulty:
+		Plus haute difficulté
+
+	:not_found:
+		Pas trouvé
+
+	:global_stats:
+		[font_size=9]Victoires: {wins}
+		Défaites: {losses}
+		Temps Passé à Déliberer: {deliberation_time}
+		Mot préféré: {favorite_word}
+		Taille de vocabulaire: {vocabulary_size}
+		Mot le plus long: {longest_word}
+		Victoire la plus rapide: {fastest_win}
+		Série actuelle: {win_streak}
+		Meilleure série: {best_win_streak}
+		Série actuelle (Autor. Rouge): {max_difficulty_streak}
+		Meilleure série (Autor. Rouge): {best_max_difficulty_streak}
+		{:hazel_streak: if hazel_streak}[/font_size]
+
+	:hazel_streak:
+		Série actuelle (Autor. Châtaîne): {hazel_streak}
+		Meilleure série (Autor. Châtaîne): {best_hazel_streak}
+
+	:not_applicable:
+		N/A
+
+:pause:
+	:resume:
+		Continuer
+
+	:save_and_quit:
+		Sauvegarder et quitter
+
+	:forfeit_turn:
+		Passer le tour
+
+	:forfeit_run:
+		Déclarer forfait
+
+:spell_select:
+	:skip:
+		Passer
+
+:summary:
+	:continue:
+		Continuer
+
+:phonebook:
+	:locked:
+		Bloqué
+
+	:locked_description:
+		Tu n'as pas encore battu cet ennemi.
+
+	:toggle_shadow:
+		Basculer Ombre

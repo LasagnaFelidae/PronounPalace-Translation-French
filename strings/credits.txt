@@ -1,0 +1,140 @@
+:skipping:
+	Passer
+
+:primary:
+	::
+		Cadence Petersen
+
+		::
+			Art
+			Conception
+			Écriture
+			Programmation additionnelle
+
+	::
+		Hazel Fackler
+
+		::
+			Programmation
+			Conception
+			Écriture
+
+	::
+		RENREN
+
+		::
+			Musique
+			Effets sonores
+
+	::
+		RedRachis
+
+		::
+			Art d'ennemis additionnels
+
+	::
+		Ash “Cometz” W.
+
+		::
+			Art cinématique additionnels
+			Couverture du jeu
+
+	::
+		J.D.
+
+		::
+			Concepts d'ennemis additionnels
+
+	::
+		redoplus
+
+		::
+			Aide écriture
+
+
+	::
+		Jordy W.
+
+		::
+			Couverture d'album
+
+:shoutouts:
+	Shoutouts
+
+	::
+		Porpentine
+
+		::
+			Inspiration pour l'Animal Synthétique, Xrafstar, et plus.
+			Va voir xrafstar.monster!
+
+	::
+		Anya Spadin
+
+		::
+			Clover et les bruitages de Clover’s Quadrants!
+
+	::
+		Hapty
+
+		::
+			Va voir Liquid Human (Humain Liquide) dans le jeu Critter Caboodle!
+
+	::
+		Nos familles et proches
+
+		::
+			<3
+
+	::
+		Toi
+
+		::
+			{"Pour nous avoir donné $20." not global.steam_inactive}{"Pour la visibilité"." if global.steam_inactive}
+
+
+:featuring:
+	Avec la participation de
+
+:playtesting:
+	Playtesters
+
+:playtesters:
+	clowncarousel
+	vanimatches
+	Shrombus
+	Klester
+	Finley “CupcakeCervidae” Rose
+	Kat
+	Jessless
+	catinsured
+	Cynthia
+	Avery Woods
+	Brandon “Mibeador” Scott
+	Anya Spadin
+	redoplus
+	melon goodposter
+	Erfly
+	Timothy “hippocrunchy” Dow
+	Charlie “axemonster267”
+	seg
+	omni
+	Kristal Laforet
+	Nick “BlorengeRhymes” Weber
+	julifiable
+	Hapty
+	_Kilburn
+	juneBeah
+	J.D.
+	Jordy W.
+	Ash “Cometz” W.
+	Marianna “foxgirlyuri”
+	Sadly Just AL
+	Andrew “Guwahavel” Angaroni
+	Porpentine
+	Dot Operator
+	Ferrium
+	Angel “oilyspoily” Ponce
+	Narillia
+	minichibisart
+	RedRachis

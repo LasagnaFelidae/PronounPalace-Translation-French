@@ -1,0 +1,704 @@
+:word_categories:
+	:colors:
+		:name:
+			Couleurs
+
+		:singular:
+			une couleur
+
+	:animals:
+		:name:
+			Animaux
+
+		:singular:
+			un animal
+
+	:metals:
+		:name:
+			Métaux
+
+		:singular:
+			un métal
+
+	:fruits_and_vegetables:
+		:name:
+			Fruits et Légumes
+
+		:singular:
+			un fruit ou légume
+
+	:body_parts:
+		:name:
+			Parties du Corps
+
+		:singular:
+			une partie du corps
+
+
+:board_targets:
+	:default:
+		{count} tuile{count plural s}
+
+	:top:
+		{:default:} {"près du" if near}{"du" not near} haut de la grille
+
+	:bottom:
+		{:default:} {"près du" if near}{"du" not near} bas de la grille
+
+
+	:all:
+		la grille entière
+
+#
+# PLAYER INTENTS
+#
+
+:player_bruise:
+	:label:
+		{bruise}
+
+
+#
+# WORD INTENTS
+#
+
+:default_label:
+	{turns|count|damage|defense|heal|}
+
+:damage:
+	:name:
+		Attaque
+
+	:description:
+		Tu vas causer {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2}.
+
+:defense:
+	:name:
+		Défense
+
+	:description:
+		Les dégâts seront réduits de {defense} point{"s" if defense >= 2}.
+
+:damage_multiplier:
+	:name:
+		Multiplicateur de dégâts
+
+	:description:
+		Les dégâts sont multipliés par {multiplier}
+
+	:label:
+		{multiplier}
+
+:defense_multiplier:
+	:name:
+		Multiplicateur de défense
+
+	:description:
+		La défense est multipliée par {multiplier}.
+
+	:label:
+		{multiplier}
+
+:acid:
+	:name:
+		Acide
+
+	:description:
+		A la fin du tour, les tuiles acides vont tomber de la grille et causer {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2} inbloquable{"s" if damage >= 2}.
+
+:bruise:
+	:name:
+		Abîmée
+
+	:description:
+		Les dégats augmentent de {damage} point{"s" if damage >= 2} si ils ne sont pas complètement bloqués.
+
+:bleed:
+	:name:
+		Saignante
+
+	:description:
+		Les tuiles saignantes non utilisées causent {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2} à la fin du tour.
+
+:shimmering:
+	:name:
+		Scintillantes
+
+	:description:
+		{:invalid_word_description: if invalid_word}{:wildcard_conflict_description: if wildcard_conflict}{:generic_description: not invalid_word|wildcard_conflict}
+
+	:generic_description:
+		Certaines permutations des tuiles scintillantes ne forment pas de mots valides
+
+	:wildcard_conflict_description:
+		Aucun joker est capable de rendre valide toutes les permutations des tuiles scintillantes
+
+	:invalid_word_description:
+		Certaines permutations des tuiles scintillantes ne forment pas de mots valides, comme “{invalid_word}.”
+
+:period:
+	:name:
+		Point
+
+	:description:
+		Mot contient un point qui n'est pas a la fin du mot.
+
+:capital:
+	:name:
+		Majuscule
+
+	:description:
+		Mot contient une majuscule qui n'est pas au début du mot.
+
+:linked:
+	:name:
+		Liées
+
+	:description:
+		Mot contient des {bad_colors list_and} tuiles liées mais pas toutes.
+
+:straight:
+	:name:
+		Hétéro
+
+	:description:
+		Mots contient des tuiles Yuri et Yaoi limitrophes.
+
+:poison:
+	:name:
+		Poison
+
+	:description:
+		Les tuiles empoisonnées {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2} à la fin du tour.
+
+:heal:
+	:name:
+		Soin
+
+	:description:
+		Tu vas soigner {heal} PV.
+
+:bomb:
+	:name:
+		Bombe
+
+	:description:
+		À la fin du tour, les bombes non jouées vont exploser et causer {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2}.
+
+:cursed:
+	:name:
+		Malédiction
+
+	:description:
+		Les tuiles maudites non jouées causeront {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2} à la fin du tour.
+
+:haze:
+	:name:
+		Brume
+
+	:description:
+		Les tuiles embrumées non jouées causeront {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2} à la fin du tour.
+
+:eternal:
+	:name:
+		Eternel
+
+	:description:
+		Les tuiles éternelles non jouées causeront {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2} à la fin du tour..
+
+:repeat_word:
+	:name:
+		Mot répété
+
+	:description:
+		“{word}” à déja été joué pendant cette partie.
+
+:laced:
+	:name:
+		Trafiqué
+
+	:description:
+		Les sorts trafiqués non-utilisés causeront {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2} à la fin du tour..
+
+:crit_chance:
+	:name:
+		Taux de {:crit_type:}
+
+	:crit_type:
+		{"Tuile critique" not wildcard}{"Tuile joker" if wildcard}
+
+	:description:
+		{chance}% {:crit_type: lower} chance une fois joué.
+		{:natural_description: if natural}{:unnatural_description: not natural}
+
+
+	:natural_description:
+		+{bonus}% de chance pour chaque lettre à partir de la cinquième. Divisé par 2 si tu trouve une {:crit_type: lower}.
+ 
+
+	:unnatural_description:
+		Divisé par 2 si tu trouve une {:crit_type: lower}.
+
+
+	:label:
+		{truncated_chance}
+
+:category_matched:
+	:name:
+		{category_name}
+
+	:description:
+		Le mot est {category_singular}. La valeur numérique des tuiles est doublée.
+
+	:default_label:
+		{turns|count|damage|defense|}
+
+:spiked_slots:
+	:name:
+		Emplacement Piquants
+
+	:description:
+		Les tuiles dans ces emplacements causeront {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2} une fois jouées.
+
+#
+# ENEMY INTENTS
+#
+
+:attack:
+	:name:
+		{"Attaque" if count|1 1}{"Attaque multiple" not count|1 1}
+
+	:description:
+		{:normal_description: if count|1 1}
+		{:multiattack_description: not count|1 1}
+
+	:normal_description:
+		Compte causer {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2}.
+
+	:multiattack_description:
+		Compte causer {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2} {count} fois.
+
+	:label:
+		{:normal_label: if count|1 1}
+		{:multiattack_label: not count|1 1}
+
+	:normal_label:
+		{damage}
+
+	:multiattack_label:
+		{damage}x{count}
+
+:bite:
+	:name:
+		Morsure
+
+	:description:
+		Compte causer {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2}.
+
+
+:harmless_attack:
+	:name:
+		{:attack/name:} dégriffé.e
+
+	:description:
+		{:attack/description:}
+
+	:label:
+		{:attack/label:}
+
+:parry:
+	:name:
+		Parade
+
+	:description:
+		{:parried_description: if parried}{:progress_description: if needed_length}{:generic_description: not parried|needed_length}
+
+	:generic_description:
+		Épeler un mot de minimum {length} lettre{length plural s} permettra de parer l'attaque ennemie.
+
+	:parried_description:
+		L'attaque ennemie a été equivée en épelant un mot de {length} lettres.
+
+	:progress_description:
+		Épeler un mot de minimum {length} lettre{length plural s} permettra de parer l'attaque ennemie. Encore {needed_length} lettre{needed_length plural s} {needed_length plural "sont"}{needed_length single "est"} requise{needed_length plural s}.
+
+	:label:
+		{needed_length|length not parried}
+
+:defend:
+	:name:
+		Blocage
+
+	:description:
+		Bloque {defense} point{"s" if defense >= 2} de dégât{"s" if defense >= 2}.
+
+:abduct:
+	:name:
+		Enlèvement
+
+	:description:
+		Compte inflinger des dégâts equivalent au nombre de tuiles ciblées.
+
+	:label:
+		x
+
+:swap_type:
+	:name:
+		Échange
+
+	:description:
+		Compte échanger le type des tuiles ciblées
+
+:lock_restock:
+	:name:
+		Bloquage de Planche
+
+	:description:
+		Compte bloquer la planche pendant {turns} tour{turns plural s}, empêchant l'arrivée de nouvelles tuiles.
+
+:multitude:
+	:name:
+		Multitude
+
+	:description:
+		Compte infliger {original_damage} points{"s" if original_damage >= 2} de dégât{"s" if original_damage >= 2}..
+		Inflige {reduce_by} point{"s" if reduce_by >= 2} de dégât{"s" if reduce_by >= 2} en moins tous les {per_health} PV perdu{"s" if per_health >= 2}.
+
+:traffic:
+	:name:
+		Trafic
+
+	:description:
+		N'attaque pas ce tour.
+		Inflige {reduce_by} point{"s" if reduce_by >= 2} de dégât{"s" if reduce_by >= 2} en moins tous les {per_health} PV perdu{"s" if per_health >= 2}.
+
+:feed:
+	:name:
+		Nourris
+
+	:description:
+		Compte manger toutes les tuiles de la ligne du bas.
+
+:filter:
+	:name:
+		Filtre
+
+	:description:
+		Compte manger {count} tuiles des deux lignes du bas.
+
+:blow:
+	:name:
+		Souffle
+
+	:description:
+		Compte tirer au hazard la face de toutes les tuiles.
+
+
+:apply_status:
+	:name:
+		{name if name}{:status_name: not name}
+
+	:status_name:
+		{status_names list_delim " " capital}
+
+	:description:
+		Compte appliquer {status_names list_and lower} à {target}.
+
+:convert_status:
+	:name:
+		{:apply_status/name:}
+
+	:description:
+		{:description_normal: not status_plural}{:description_pluralize: if status_plural}
+
+	:description_normal:
+		Compte convertir {target} en {status_names list_delim " " lower}.
+
+	:description_pluralize:
+		Compte convertir {target} en {status_names list_delim " " lower}{count plural s}.
+
+:paddle:
+	:name:
+		Pagaie
+
+	:description:
+		Compte convertir {yuri_rows} ligne{yuri_rows plural s} en Yuri et {yaoi_rows} ligne{yaoi_rows plural s} en Yaoi.
+
+:suit_paddle:
+	:name:
+		Rame
+
+	:description:
+		Compte convertir deux tuiles en tuiles saignantes du même type et deux tuiles Couleurs cendrées du même type
+
+:menstruate:
+	:name:
+		Menstruer
+
+:coagulate:
+	:name:
+		Coagule
+
+:coagulate_trigram:
+	:name:
+		Coagule
+
+:large_intestine:
+	:name:
+		Grand Intestin
+
+:small_intestine:
+	:name:
+		Intestin Grêle
+
+:dream:
+	:name:
+		Rêve
+
+	:description:
+		Compte convertir {count} tuile{count plural s} aux bords de la planche en {letter upper} cendrées{count plural s}.
+
+:keypad:
+	:name:
+		Pavé Numérique
+
+	:description:
+		Remplace la planche au format T9 pendant un tour.
+
+:hole_punch:
+	:name:
+		Tir d'avertissement
+
+	:description:
+		{:holes_description:}{:ash_description: if ash}.
+
+	:ash_description:
+		, ensuite le{holes plural s} rend Cendrée{holes plural s}
+
+	:holes_description:
+		Compte tirer dans le{holes plural s} tuile{holes plural s} ciblée{holes plural s}
+
+
+:ticking:
+	:name:
+		Tic-tac
+
+	:description:
+		Cet ennemi va exploser dans {turns} tour{turns plural s}, se suicidant et inflige {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2}.
+:detonate:
+	:name:
+		Tic-tac
+
+	:description:
+		Compte exploser, se suicidant et inflige {damage} point{"s" if damage >= 2} de dégât{"s" if damage >= 2}.
+
+:sprawl:
+	:name:
+		Renforce
+
+	:description:
+		Compte bétonner les tuiles plastiques.
+
+	:label:
+		x
+
+:poison_scramble:
+	:name:
+		Embrouiller
+
+	:description:
+		Compte appliquer Poison à {count} tuile{count plural s}, épelant un mot embrouillé.
+
+:bleed_full_word:
+	:name:
+		Liquide Absorbant
+
+	:description:
+		Compte rendre {count} tuile{count plural s} Saignante{count plural s} et convertis 2 en tuiles majuscules et points.
+
+:doublespeak:
+	:name:
+		Doubleparler
+
+	:convert_count:
+		{count} tile{count plural s} en{count single " une"} tuile{count plural s} {status}{count plural s}
+
+	:description:
+		Compte convertir {:convert_count: with count damage_crits status "Bois Critique"}{:shimmering_damage_description: not shimmering_damage_crits|0 0} et {:convert_count: with count defense_crits status "Plastique(s) Crit. Scintillantes"}.
+
+	:shimmering_damage_description:
+		, {:convert_count: with count shimmering_damage_crits status "Bois Crit. Scintillante"},
+
+:cursed_capital:
+	:name:
+		Majuscule maudite
+
+	:description:
+		Compte changer {count} tuile{count plural s} en{count plural " des"}{count single " une"} tuile{count plural s} {letter upper} majuscule maudite{count plural s}.
+
+	:label:
+		{letter upper}
+
+:bleed_curse:
+	:name:
+		Malédiction saignante
+
+	:description:
+		Compte maudire toutes les tuiles saignantes
+
+:apply_eternal:
+	:name:
+		Éternelle
+
+	:description:
+		{:description_normal: not count 0}
+		{:description_randomize: if count 0}
+
+	:description_normal:
+		Compte rendre {count} tuile{count plural s} éternelle{count plural s} et change la façe de toutes les tuiles éternelles.
+
+	:description_randomize:
+		Compte changer la façe de toutes les tuiles éternelles.
+
+	:label:
+		{count not count 0}
+
+:bleed_wildcard:
+	:name:
+		Joker Saignant
+
+	:description:
+		Intends to convert {count} tile{count plural s} to{count single " a"} bleed double-wildcard tile{count plural s}.
+
+:mystery_crit:
+	:name:
+		Critique Mystère
+
+	:description:
+		Intends to convert {count} tile{count plural s} into{count single " a"} plastic crit tile{count plural s} with{count plural " the same"}{count single " a"} mystery {"double-" if double}letter.
+
+:passcode:
+	:name:
+		Mot de passe
+
+	:description:
+		Meurt instantanément si tu épèles “{word}.”
+
+:category:
+	:name:
+		{category_name}
+
+	:description:
+		Les mots pour {category_name lower} comptent double.
+
+:alter_board:
+	:name:
+		Altération de Grille
+
+	:description:
+		Compte modifier la grille.
+
+:expand_board:
+#	:name:
+#		Expansion de Grille
+#
+#	:description:
+#		Compte augmenter la taille de la grille à {size_x}x{size_y}.
+
+	:name:
+		{:alter_board/name:}
+
+	:description:
+		{:alter_board/description:}
+
+:shrink_board:
+#	:name:
+#		Réduction de Grille
+#
+#	:description:
+#		Compte réduire la taille de la grille à {size_x}x{size_y}.
+
+	:name:
+		{:alter_board/name:}
+
+	:description:
+		{:alter_board/description:}
+
+
+:letter_opener:
+	:name:
+		Ouvre-lettre{"?" if cursed}
+
+	:description:
+		Compte retirer la rangée du bas, infligant des dégats équivalents à la valeur totale des tuiles supprimées.
+		{:cursed_description: if cursed}
+
+	:cursed_description:
+		Les prochaines tuiles qui arrivent dans la grille seront maudites.
+
+	:label:
+		x
+
+:board_shear:
+	:name:
+		Tranchage de Grille
+
+	:description:
+		Compte couper la taille de la grille à {size_x}x{size_y} et applique {count} saignant{"s" if count >= 2} a la colonne de droite.
+
+:clear_board:
+#	:name:
+#		Clear Board
+#
+#	:description:
+#		Intends to remove all tiles on the tile board and set restock depth to 0.
+
+	:name:
+		{:alter_board/name:}
+
+	:description:
+		{:alter_board/description:}
+
+:curse_board:
+#	:name:
+#		Curse Board
+#
+#	:description:
+#		Intends to expand the board to {size_x}x{size_y}, then convert the leftmost column to cursed capitals{" and the rightmost column to cursed periods" if cursed_periods}.
+
+	:name:
+		{:alter_board/name:}
+
+	:description:
+		{:alter_board/description:}
+
+:preparing:
+	:name:
+		Preparation
+
+	:description:
+		L'ennemi prépare une attaque très puissante.
+
+:acid_bomb:
+	:name:
+		Bombe Acide
+
+	:description:
+		{:base_description: if bigram_bombs 0}
+		{:bigram_description: not bigram_bombs 0}
+
+	:acid_description:
+		Intends to convert {acid} tile{acid plural s} at the top of the tile board to acid
+
+	:base_description:
+		{:acid_description:} and {bombs} tile{bombs plural s} to{bombs single " a"} bomb{bombs plural s}.
+
+	:bigram_description:
+		{:acid_description:}, {bombs} tile{bombs plural s} to{bombs single " a"} bomb{bombs plural s}, and {bigram_bombs} tile{bigram_bombs plural s} to{bigram_bombs single " a"} bigram bomb{bigram_bombs plural s}.
+
+:concentration:
+	:name:
+		Concentration
+
+	:description:
+		{:multitude/description:}

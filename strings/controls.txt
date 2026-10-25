@@ -1,0 +1,92 @@
+:hotkeys:
+	::
+		::
+			toggle_fullscreen
+
+		::
+			Plein écran
+
+	::
+		::
+			toggle_mute
+
+		::
+			Muet
+
+:controller:
+	::
+		::
+			ui_left
+
+		::
+			Selectionner une tuile
+
+	::
+		::
+			spell_0 spell_1 spell_2 spell_3
+
+		::
+			Selectionner un sort
+
+	::
+		::
+			click_tile
+
+		::
+			Cliquer
+
+	::
+		::
+			left_stick
+
+		::
+			Selectionner une tuile de la planche
+
+	::
+		::
+			left_stick + select_inner_tiles
+
+		::
+			Selection interieure de tuiles
+
+	::
+		::
+			left_stick + select_word
+
+		::
+			Selectionner une tuile du mot
+
+	::
+		::
+			right_stick
+
+		::
+			Curseur libre
+
+	::
+		::
+			left_stick + right_stick
+
+		::
+			Selectionner la face de la tuile
+
+	::
+		::
+			remove_tile
+
+		::
+			Retirer la (dernière) tuile selectionnée
+
+	::
+		::
+			end_action
+
+		::
+			Soumettre
+
+	::
+		::
+			pause
+
+		::
+			Menu

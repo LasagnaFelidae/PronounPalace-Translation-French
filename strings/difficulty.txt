@@ -1,0 +1,80 @@
+:clearance:
+	Autorisation {name}
+
+:0:
+	:name:
+		Beige
+
+	:description:
+		Difficulté de base.
+
+:1:
+	:name:
+		Noire
+
+
+	:description:
+		Les ennemis sont plus fort et ont plus de vie.
+
+:2:
+	:name:
+		Violette
+
+	:description:
+		Les sorts peuvent être maudits.
+
+:3:
+	:name:
+		Bleue
+
+	:description:
+		Les tuiles peuvent débuter avec une majuscule, un bigramme ou un point.
+
+:4:
+	:name:
+		Ceruléene
+
+	:description:
+		Pas de mots répétés.
+
+:5:
+	:name:
+		Sarcelle
+
+	:description:
+		Les ennemis sont encore plus difficile.
+
+:6:
+	:name:
+		Verte
+
+	:description:
+		Les ennemis sont encore plus de vie.
+
+:7:
+	:name:
+		Jaune
+
+	:description:
+		Les sorts ont plus de chance d'être maudits.
+
+:8:
+	:name:
+		Orange
+
+	:description:
+		Regénération post-boss réduite.
+
+:9:
+	:name:
+		Rouge
+
+	:description:
+		Effects de status plus rude.
+
+:10:
+	:name:
+		Châtaîne
+
+	:description:
+		Difficulté de la développeuse.

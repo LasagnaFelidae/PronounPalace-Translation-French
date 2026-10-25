@@ -1,0 +1,111 @@
+:encounter:
+	{enemy}
+
+:spell_usage:
+	{spell}: {times_used}
+
+:title:
+	{:act_cleared_title: not act -1}{:game_finished_title: if act -1}
+
+:act_cleared_title:
+	Acte Terminé
+
+:game_finished_title:
+	{"Victoire!" if victory}{"Défaite..." not victory}
+
+:time:
+	{"Temps total de délibération" if act -1}{"Temps passé à déliberer" not act -1}: {time}
+
+:act_times:
+	{times list_delim " / "}
+
+:highest_damage:
+	Record de dégâts infligés: {damage}
+
+:longest_fight:
+	Combat le plus long: {enemy}
+
+:shortest_fight:
+	Combat le plus court: {enemy}
+
+:average_word_length:
+	Longueur de mot moyen: {average_word_length}
+
+:turns_taken:
+	Nombre de tours: {turns}
+
+:enemy_stats:
+	({time}, {turns}, {+damage_taken})
+
+:enemy_time:
+	{time}
+
+:enemy_damage:
+	{"-" if damage not 0}{damage} PV{damage plural S}
+
+:enemy_healing:
+	{healing} PV{healing plural S} SOIGNÉ{healing plural S}
+
+:enemy_turns:
+	{turns} TOUR{turns plural S}
+
+:difficulty:
+	Difficulté: {difficulty}
+
+:run_info_string:
+	({:daily_string: if daily}{:seed_string: not daily})
+
+:seed_string:
+	Séquence: {seed}
+
+:daily_string:
+	Quotidien du {month}/{day}/{year}
+
+:longest_words:
+	Mots les plus longs:
+
+:word:
+	• {word}
+
+:forgot:
+	Tu as oublié d'épeler des mots :(
+
+:fights_title:
+	Combats
+
+:spells_used_title:
+	Sorts utilisés
+
+:words_title:
+	Mots joués
+
+:leaderboard_entry:
+	:act:
+		{:act_known: if act}{:act_unknown: not act}
+
+	:act_unknown:
+		?-?
+
+	:act_known:
+		{act}-{floor}
+
+	:lost_description:
+		{:died: not forfeited}{:forfeited: if forfeited}
+
+	:died:
+		{:died_enemy: if enemy_name}{:died_generic: not enemy_name}
+
+	:died_generic:
+		Mort.e.
+
+	:died_enemy:
+		Abattu par {enemy_name}
+
+	:forfeited:
+		{:forfeited_enemy: if enemy_name}{:forfeited_generic: not enemy_name}
+
+	:forfeited_generic:
+		Déclaré forfait
+
+	:forfeited_enemy:
+		Déclaré forfait contre {enemy_name}

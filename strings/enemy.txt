@@ -1,0 +1,561 @@
+# Start a line with # to make a comment
+# :identifier: marks a new string, strings continue until next identifier, have leading and trailing whitespace trimmed
+
+:cat:
+	:name:
+		Chat
+
+	:phonebook:
+		Le lumpenproletaraire honoraire. Le Parti n'a pas besoin de se foûler la cheville pour etouffer l'envie aux chats qui tentent de s'organiser.
+
+	:credit:
+		Boswellox le Chat
+
+:declawed:
+	:name:
+		{persistent_data.declawed_name if persistent_data.declawed_name}{"Sans-nom" not persistent_data.declawed_name}
+
+	:phonebook:
+		Comme alternative éthique à l'euthanisation, les surplus de chats de refuges sont dégriffés et relachés pour mourir de faim dans la rue, hors de la vue du Parti.
+
+		Victimes de négligances, ils pensent que les premiers mots qu'on leur a dits sont leurs noms.
+
+:npcs:
+	:name:
+		PNJs
+
+	:phonebook:
+		L'Espoir - si il y a - repose sur les prolos.
+
+	:credit:
+		Eux-mêmes
+
+:traffic:
+	:name:
+		Trafic
+
+	:phonebook:
+		Le monde se porterait tellement
+		mieux si tout les autres crevaient.
+
+:bottom_feeder:
+	:name:
+		Opportuniste
+
+	:phonebook:
+		Macromicroorganismes qui ont gonflé en taille à cause de la quantité monstrueuse d'immondices produite dans les banlieues.
+
+		Aimé par les citoyen pour leur forme adorable, et par les chats pour leurs cris irrésistibles.
+
+	:credit:
+		Soi-même
+
+:filter_feeder:
+	:name:
+		Profiltreur
+
+	:phonebook:
+		La surabondance de déchets dans les banlieues est la cause des ces êtres à la bouche fine . Les profiltreur ne demande qu'on leur donne la merde la plus qualitative possible.
+
+:noppy:
+	:name:
+		Naph
+
+	:phonebook:
+		Naph a révé, fondu.e dans sa louche;
+
+		Qu'iel touchait la poussière d'étoile;
+
+		Et s'envola au-dessus de la Lune.
+
+	:credit:
+		Soi-même
+
+:soppy:
+	:name:
+		Dada
+
+	:phonebook:
+		Graines de pavot, rêvant d'amativité;
+
+		Engrainée dans leur mémoire: leur mortalité;
+
+		Seras-tu près de moi, à mon dernier souffle?
+
+:people:
+	:name:
+		Gens
+
+	:phonebook:
+		Fabriqués pour servir d'ingrédient principal à Sorgho Vert, ils ont récemment obtenus des droits via l'argument que “Sorgho Vert est fait de gens.”
+
+		Pour contourner cela, ils sont souvent déclarés en état de mort légale suite à la plus infime des blessures.
+
+	:credit:
+		J.D.
+
+:decedent:
+	:name:
+		Défunt
+
+	:phonebook:
+		Malgré eux, les Gens sont devenus la nourriture qu'ils ont toujours été. Cela n'a pas duré, et à eu une fin tragique suite à une flopée de produits d'hygiène buccal: les jeunes ne veulent plus manger de Gens, qu'ils pensent goûtent le dentifrice.
+
+:stoker:
+	:name:
+		Chauffeur
+
+	:phonebook:
+		Grâce aux innovations dans l'énergie verte, l'industrie du Parti produis du charbon à la place de le consommer.
+
+	:credit:
+		Jordy W.
+
+:broker:
+	:name:
+		Foisoneur
+
+	:phonebook:
+		Grâce aux principes économiques robustes du Parti, la valeur monétaire est tellement haute que brûler des billets est considéré une innovation nécéssaire dans l'énergie verte.
+
+:bookworm:
+	:name:
+		Lexicochète
+
+	:phonebook:
+		Une création biogénétique relachée dans les banlieues, avec une envie de dévorer des mots en tous genres. Un jeu populaire avec la jeunesse prolétarienne est de faire une file, et de taper sur le ver avec un baton, chacun son tour, jusqu'a qu'il explose.
+
+	:credit:
+		Soi-même
+
+:milkworm:
+	:name:
+		Lactochète
+
+	:phonebook:
+		Une itération des lexicochètes plus résistantes à la cruauté des enfants.
+
+:fat_cat:
+	:name:
+		Gros Minou
+
+	:phonebook:
+		Un Shorthair Amérikkkain exemplarisé par les humains envers les chats errants ou sauvages. Iel est incapable de faire mal à une mouche, sauf par accident. Et si personne le touche pendant trois tours, iel part.
+
+	:credit:
+		Momo la Chatte
+
+:purrgeoisie:
+	:name:
+		Bourchatsie
+
+	:phonebook:
+		La bourchatsie n'est pas humaine.
+
+:urchin:
+	:name:
+		Chenapan
+
+	:phonebook:
+		C'est connu qu'une forte dose de stimulants débloque un potentiel psionique chez les enfants. Certains orphelins recoivent des amphétamines et de la nourriture après avoir divulgué des ennemis de l'État.
+
+	:credit:
+		B.
+
+:lump:
+	:name:
+		Empotée
+
+	:phonebook:
+		Une gamine auto-proclamée génie. Grâce à son éducation de CM1, elle connaît TOUTES les couleurs et les animaux.
+
+:elmer:
+	:name:
+		Émission Publique
+
+	:phonebook:
+		L’art moral est au premier plan lorsqu’il s’agit de la sécurité des enfants, et les parents sont soulagés d’avoir un programme qui communique de manière sûre et saine l’importance de maintenir les limites de classe.
+
+		Les écrans sont un loisir qui n’est pas offert à la classe inférieure, donc les prolos interrogés et ridiculisés à la télé ne pourront jamais regarder l'émission.
+
+	:credit:
+		Ash “Cometz” W.
+
+:anti_sex_worker:
+	:name:
+		Parthénos
+
+	:phonebook:
+		Les Parthénos sont employées par le Bureau des Recensements pour mieux aligner la population avec leurs données en commettant des actes radicaux puritains.
+
+		La menstruation est un test de pureté que les Parthénos doivent passer tous les mois. Les Parthénos ménopausées sont mises sous hormones pour rester fertiles et sanglantes pendant toute la durée de leur contrat.
+
+	:credit:
+		Marianna “foxgirlyuri”
+
+:sex_traitor:
+	:name:
+		Traitrêsse Sexuelle
+
+	:phonebook:
+		Une Parthénos qui à raté son quota menstruel. Présumée non-célibataire jusqu'a ses prochaines règles, et doit porter des vêtements blancs et purs, tachés de liquide absorbant bleu.
+
+:snowball:
+	:name:
+		Bouboule
+
+	:phonebook:
+		Les bureaucrates se tournent vers les amphéts pour pouvoir se concentrer pendant leurs heures de travail longs et monotones.
+
+		Ce gars est juste un connard cependant.
+
+	:credit:
+		Klester
+
+:eightball:
+	:name:
+		Boulazed
+
+	:phonebook:
+		Bouboule n'est pas une pédale, mais sous son alias en drag, personne ne se doute que c'est un bandeur.
+
+:paddlers:
+	:name:
+		Pas-gayeurs
+
+	:phonebook:
+		Les pas-gayeurs, comme tout jubiliste, partagent un amour du consumérisme d'antan. Quand ils ont appris l'existance du “capitalisme rose”, ils ont fait tapis.
+
+		La contrebande de revues et magasines extérieur au Parti est leur spécialité.
+
+	:credit:
+		CupcakeCervidae & Sadly Just AL
+
+:social_climbers:
+	:name:
+		Rameurs Sociaux
+
+	:phonebook:
+		Ont abandonné l'homosexualisme une fois recruté au Parti Intérieur pour moucharder les autres jubilistes.
+
+		Le Parti n'avait même pas besoin d'offir la suspension de leurs nombreuses violations du code vestimentaire.
+
+:freezer:
+	:name:
+		Congélateur
+
+	:phonebook:
+		Un thermos de glace qui ne fond jamais et doté d'une énergie kinétique incroyable.
+
+		Les scientifiques du Parti ont éssayé de l'étudier pendant des années, mais à chaque fois il arrive a se faufiler et échapper aux tests chimiques. Les seules infos concluantes se résultent à NE PAS, ET CELA SOUS TOUTES CIRCONSTANCES, MENTIONNER LE MOT D'UN VOLATILE QUI SE TROUVE AUSSI ÊTRE UN TERME DE GOLF CONNU
+
+	:credit:
+		“Let A Woman Be A Woman”
+
+:foreign_body:
+	:name:
+		Corps Étranger
+
+	:phonebook:
+		Je m'en souviens encore. Tu te moquais de moi à propos de mon talent au golf, et j’essayais de te dire c'était un sport de riche, mais tu m’as répondu que non, que tout le monde jouait au golf, etait que j’étais juste nul. J’essayais de ne pas t'ouvrir mon coeur, et même après tout ce qui s’était passé, je n’avais pas eu le courage de te demander une photo.
+
+        Je n’ai fait partie de ton univers que pendant quelques mois, mais je n’ai jamais cessé de t'aimer.
+
+	:credit:
+		“Huit Octobre 1971”
+
+:liquid_human:
+	:name:
+		Humain Liquide
+
+	:phonebook:
+		Les premières expériences vers un "meilleur humain", maintenant liquide: des amalgames conscients de prisonniers politiques du Parti. Les humains liquides sont incrustés dans les trottoires pour apporter un sens de camaraderie à leurs compatriotes humains.
+
+		Il est dit que quand une bulle explose, on peut entendre leurs cris...
+
+	:credit:
+		Andrew “Guwahavel” Angaroni
+
+:proto_cop:
+	:name:
+		Proto-Keuf
+
+	:phonebook:
+		Des altérations expérimentales sur les humains liquides pour limiter leurs envies de violence sporadiques et non-sanctionnées, ont permi de trouver un outil pour la violence sanctionnée.
+
+:strawman:
+	:name:
+		Prête-nom
+
+	:phonebook:
+		Les Prête-noms sont programmés avec une envie sans-limite d'être touchés. Relachés périodiquement dans les cités pour rappeler aux bureaucrates pourquoi le capitalisme a échoué.
+
+	:credit:
+		DECtalk
+
+:housebroken:
+	:name:
+		Débridé.e
+	:phonebook:
+		Certains citoyens succombent aux magouilles des Prête-noms pour reçevoir des caresses. Une catégorie d'anti-citoyens avisé.e.s sur la technologie du 21ème siècle, y ont aussi tendance. En exploitant une faille de sécurité, on peut réduire l'envie aux Prête-noms de mettre fin à leurs jours, et les apprivoiser.
+
+		Les Prête-noms altéré.e.s de cette manière ont tendance à avoir des fuites électrolytes
+:greeb:
+	:name:
+		Greeb
+
+	:phonebook:
+		Greeb really wishes the Alium homeworld would cut him a little more slack. Infiltrate the government of Earth? Which one? Maybe what the homeworld really needs is some of that flower the jubilists are peddling.
+
+	:credit:
+		peas
+
+:ufo:
+	:name:
+		Michel Foucault
+
+	:phonebook:
+		It is hotly debated among scholars as to whether Michel Foucault should be upheld—if not revered—as the prime exemplar of a normal human male. Just one look at him makes people say, “There goes Michel Foucault, the Frenchman.”
+
+		When people feel compelled to comment on his appearance, they recall that Michel Foucault is an atheist, which is unremarkable and not worth bringing attention to in secular society.
+
+	:credit:
+		En tant que lui-même
+
+:dew_jubilist:
+	:name:
+		Jubiliste Monstrueuse
+
+	:phonebook:
+		Une vandale jubiliste dont sa passion pour la politique sensée est surpasée uniquement par son amour de l'elixir pétillant jaunâtre.
+
+		Le fait qu'elle n'a pas encore été chopée est plus honteux par rapport au Parti et leur capacité de contrôler les jubilistes plutot qu'a un exploit de sa part.
+
+	:credit:
+		jigokey
+
+:dew_jubajalist:
+	:name:
+		Bleubiliste Monstrueuse
+
+	:phonebook:
+		Une jubiliste en retard sur les dernières tendances.
+
+:xrafstar:
+	:name:
+		Xrafstar
+
+	:phonebook:
+		Victimes de la pollution Ahrimanic. Des schizos qui font chier leur monde avec leur manies dégoutantes d'insectes dégénérés.
+
+	:credit:
+		Porpentine
+
+:pseud:
+	:name:
+		Pseude
+
+	:phonebook:
+		Le point positif d'avoir un parasite qui contrôle leurs pensées à la place de leurs intestins c'est qu'ils n'ont plus de colite. Ils peuvent enfin arrêter de manger des Gens!
+
+:brutalist:
+	:name:
+		Brutaliste
+
+	:phonebook:
+		Le summum anti-migratoire du Parti: un mur vivant sachant parler et remplir des formulaires d'immigration.
+
+		Les détenu.e.s qui osent entrer avec des documents incomplets sont lentement consommés par des sessions d'interrogations longues et pénibles.
+
+	:credit:
+		Dot Operator
+
+:herarra:
+	:name:
+		Herarra
+
+	:phonebook:
+		Plants with a humanlike sapience that have been domesticated by the Party out of a tokenistic effort to integrate them into society. Screened for and diagnosed with autism without exception.
+
+		They spend the entirety of their adult lives solving complicated math problems designed to induce stress so that they shed their valuable petals.
+
+	:credit:
+		Cole Matchen
+
+:juvenile:
+	:name:
+		Juvenile
+
+	:phonebook:
+		Herarras not yet ready to commit to a 56-hour work week are considered subhuman and confined to the Bureau of Love’s nurseries, where gentle caretakers practice one-on-one emotional detachment with them.
+
+:prole_service:
+	:name:
+		Service aux Prolos
+
+	:phonebook:
+		Responsables des plaintes des prolos, mais n'a aucune possibilité de les résoudre.
+
+	:credit:
+		Ferrium
+
+:receiver:
+	:name:
+		Reçeveuse
+
+	:phonebook:
+		Les oestros l'a sauvée. A eu une brève érection quand elle a porté une chemise féminine pour la première fois et est maintenant convaincue que la Police va l'arrêter pendant son sommeil pour ses crimes autogynophiles.
+
+		La dernière chose pouvant la réconforter est de regarder des films X de Nouveau Keufs se faire remplir d'eau jusqu'a qu'ils explosent.
+
+:prodigy:
+	:name:
+		Prodige
+
+	:phonebook:
+		Les membres les plus producti.f.ve.s de la société sont récompensé.e.s avec des nouvelles tâches à faire de plus en plus obscures. 
+
+	:credit:
+		En tant que lui-même
+
+:invalid:
+	:name:
+		Invalide
+
+	:phonebook:
+		Les membres les moins producti.f.ve.s de la société sont puni.e.s avec des nouvelles tâches à faire de plus en plus obscures. 
+
+:umami:
+	:name:
+		Umami
+
+	:phonebook:
+		Le tentative du BUROPORNO à la création d'une vraie femme-lapine, après que des pornologues jubilistes aient crée une demande de niche. Alterne sans soucis entre domina et soumise.
+
+	:credit:
+		LA CHIENNE DE RENREN, SASCHA
+
+:salt:
+	:name:
+		Sel
+
+	:phonebook:
+		Suite à une peur des vraies femmes-lapines, le BUROPORNO à rectifié en rendant les itérations futures plus “blanches.”
+
+		Grâce a leur absence de mélanine, elles sont quasi entièrement aveugles.
+
+:rubber_animal:
+	:name:
+		Pseudo-Clebs
+
+	:phonebook:
+		Un animal de compagnie atypique pour bourges. Leur uniforme synthétique procuré par le Parti les empêchent de s'abîmer, et leurs dents retractibles permet tout autant d'éffrayer la classe moyenne qu'il permet à son propriétaire de se vider.
+
+	:credit:
+		Angel “oilyspoily” Ponce
+
+:pink_rubber_animal:
+	:name:
+		Pseudo-Clebs Rose
+
+	:phonebook:
+		Le chien thérapeutique contemporain. Les Pseudo-Clebs Roses sont périodiquement relachés pour chasser et déchiqueter les bureaucrates portant une quantité illégale de traumatismes enfouis.
+
+:paradigm:
+	:name:
+		Paradigme
+
+	:phonebook:
+		Lae dernièr.e membre de La Nation du Jubilisme, une des nombreuses organisation jubilistes dédiée à renverser le Parti.
+
+		Quand leur manifeste de 700 pages à été considéré par ses camarades jubilistes “trop nihiliste,” cette perle rare a décidé de causer le changement sociétal dont iel a toujours révé.
+
+	:credit:
+		Narillia
+
+:copycat:
+	:name:
+		Plagieur
+
+	:phonebook:
+		Un jubiliste inspiré par les restants d'un manifeste brulé. Beaucoup de boulot a servi à cultiver l'esthétique l'idéologie radicale.
+
+:new_cop:
+	:name:
+		Nouveau Keuf
+
+	:phonebook:
+		A new state calls for a new monopolization of state violence, conveniently packaged in a new type of pool toy. New Cops—like any cop—volunteer their humanity in exchange for being liquified and chemically treated, a new, stronger type of person emerging, a person free from the miasma of remembering or hunger or having feelings beyond a potent sense of loyalty to the Party.
+
+	:credit:
+		hairyballbastic
+
+:sheriff:
+	:name:
+		Sheriff
+
+	:phonebook:
+		New Cops that mistakenly develop a sense of authority are awarded a medal that conveniently keeps their ambitions in check.
+
+:vampire:
+	:name:
+		Oenone
+
+	:phonebook:
+		Oenone’s seen it all before.
+
+		Regimes always act like they’re so different, but the important thing is that there’s an “in-group” and an “out-group.”
+
+		Oenone is part of the “in-group.”
+
+	:credit:
+		vanimatches
+
+:parasite:
+	:name:
+		Parasite
+
+	:phonebook:
+		You can have anything if you’re important enough. You could even have the blood plasma of one hundred svelte elflike twinks. If that was something you really wanted.
+
+:age_regressor:
+	:name:
+		Age Regressor
+
+	:phonebook:
+		What do you do with dissidents who
+		are beyond rehabilitation? Start over.
+
+	:credit:
+		minichibisart
+
+:trauma_core:
+	:name:
+		Trauma Core
+
+	:phonebook:
+		All errant social behavior can be understood through the modern psychoanalytical lens of trauma, and the best way to deal with trauma is to entomb the patient within a machine that arduously reconstructs their entire body.
+
+:bammon:
+	:name:
+		Jambon
+
+	:a_pig:
+		Un Porc
+
+	:phonebook:
+		Tout le monde demande à Jambon ce que tout cela voulait dire. Qu'ils ne comprennent pas le symbolisme ou la signification. Est-ce une métacritique? Jambon n'a pas besoin d'en parler. Il est intouchable.
+
+	:credit:
+		RedRachis
+
+:nobody:
+	:name:
+		Personne
+
+	:phonebook:
+		Parmi les autres employé.e.s du BUROPRONOM;
+		Personne de particulier.
+
+	:credit:
+		Cadence Petersen

@@ -1,0 +1,1012 @@
+:p:
+	{"." not control}{"$" if control}
+
+# Censor Start
+:c_st:
+	{"[color=#00000044][shake rate=10.0 level=2]" not trans}
+
+# Censor End
+:c_en:
+	{"[/shake][/color]" not trans}
+
+:c_I:
+	{:c_st:}I{:c_en:}
+:c_Im:
+	{:c_st:}I’m{:c_en:}
+
+:c_Ill:
+	{:c_st:}I’ll{:c_en:}
+
+:c_me:
+	{:c_st:}me{:c_en:}
+
+:c_my:
+	{:c_st:}my{:c_en:}
+
+:c_My:
+	{:c_st:}My{:c_en:}
+
+:c_You:
+	{:c_st:}You{:c_en:}
+
+:c_you:
+	{:c_st:}you{:c_en:}
+
+:c_your:
+	{:c_st:}your{:c_en:}
+
+:c_youre:
+	{:c_st:}you’re{:c_en:}
+
+:c_Youre:
+	{:c_st:}You’re{:c_en:}
+
+:c_youve:
+	{:c_st:}you’ve{:c_en:}
+
+:c_s:
+	{:c_st:}’s{:c_en:}
+
+#########################
+#####  FR PRONOMS   #####
+#########################
+
+# Premiere personne (Je)
+:c_Je:
+	{:c_st:}Je{:c_en:}
+:c_je:
+	{:c_st:}je{:c_en:}
+:c_J:
+	{:c_st:}J'{:c_en:}
+:c_j:
+	{:c_st:}j'{:c_en:}
+:c_m:
+	{:c_st:}m'{:c_en:}
+:c_M:
+	{:c_st:}M'{:c_en:}
+:c_moi:
+	{:c_st:}moi{:c_en:}
+
+# possessif
+:c_me:
+	{:c_st:}me{:c_en:}
+:c_ma:
+	{:c_st:}ma{:c_en:}
+:c_Ma:
+	{:c_st:}Ma{:c_en:}
+:c_mes:
+	{:c_st:}mes{:c_en:}
+:c_Mes:
+	{:c_st:}Mes{:c_en:}
+
+
+# Deuxieme personne
+
+:c_Tu:
+	{:c_st:}Tu{:c_en:}
+:c_tu:
+	{:c_st:}tu{:c_en:}
+:c_T:
+	{:c_st:}T'{:c_en:}
+:c_t:
+	{:c_st:}t'{:c_en:}
+:c_te:
+	{:c_st:}te{:c_en:}
+:c_tes:
+	{:c_st:}tes{:c_en:}
+:c_Tes:
+	{:c_st:}Tes{:c_en:}
+:c_tues:
+	{:c_st:}t'es{:c_en:}
+:c_Tues:
+	{:c_st:}T'es{:c_en:}
+
+:c_Vous:
+	{:c_st:}Vous{:c_en:}
+
+:c_vous:
+	{:c_st:}vous{:c_en:}
+
+:c_toi:
+	{:c_st:}toi{:c_en:}
+:c_Toi:
+	{:c_st:}Toi{:c_en:}
+
+# possessif
+
+:c_ton:
+	{:c_st:}ton{:c_en:}
+:c_ta:
+	{:c_st:}ta{:c_en:}
+:c_tes:
+	{:c_st:}tes{:c_en:}
+:c_votre:
+	{:c_st:}votre{:c_en:}
+:c_vos:
+	{:c_st:}vos{:c_en:}
+:c_Ton:
+	{:c_st:}Ton{:c_en:}
+:c_Ta:
+	{:c_st:}Ta{:c_en:}
+:c_Tes:
+	{:c_st:}Tes{:c_en:}
+:c_Votre:
+	{:c_st:}Votre{:c_en:}
+:c_Vos:
+	{:c_st:}Vos{:c_en:}
+:c_ennous:
+	{:c_st:}en{:c_en:}
+
+
+
+#########################
+##### LEXICOGRAPHER #####
+#########################
+
+
+:lexicographer:
+	:intro:
+		:flags:
+			pre_trans priority first_encounter
+
+		::
+			Il y'a eu un malentendu.
+			:flags:
+				character
+
+		::
+			Le Parti m'a confisqué
+			{:c_mes:} pronoms, mais
+			{:c_j:}ai tout fait dans les règles.
+			:flags:
+				character
+
+		::
+			{:c_J:}ai les formulaires sur {:c_moi:}.
+			Est-ce bien le BUROPRONOM?
+			:flags:
+				character
+
+		::
+			Je ne peux pas {:c_vous:} aider
+			à transitionner illégalement.
+			:flags:
+				nobody
+
+		::
+			Quelle est la manière légale alors?
+			:flags:
+				character
+
+		::
+			{:c_Vous:} êtes hilarant, M{:p:} Nguyen.
+			:flags:
+				nobody
+
+		::
+			[font_size=20]...[/font_size]
+
+			:flags:
+				nobody pro_piracy
+
+		::
+			Pourquoi êtes {:c_vous:} habillé
+			en pirate?
+
+			:flags:
+				nobody pro_piracy
+
+	:red:
+		:flags:
+			difficulty_9 priority story
+
+		::
+			{:c_J:}ai enfin compris.
+
+			:flags:
+				character
+
+		::
+			Le Parti n'est pas intouchable.
+			Le système existera tant qu'il
+			y'aura des gens pour l'alimenter.
+
+			:flags:
+				character
+
+		::
+			Tant qu'on unira nos
+			forces, il y'a de l'espoir
+			pour un meilleur lendemain!
+
+			:flags:
+				character
+
+		::
+			Wryn,
+
+		::
+			Il n'y a point de lendemain.
+
+			:flags:
+				nobody
+
+	:hazel:
+		:flags:
+			difficulty_10 priority story non_canon
+
+		::
+			Si vous pouviez dire ce que 
+			vous voulez, sachant qu'il 
+			n'y aurait pas de trace écrite...
+
+			:flags:
+				character
+
+		::
+			Ça serait quoi?
+
+			:flags:
+				character
+
+		::
+			J'aimerais...
+
+		::
+			[font_size=12]...[/font_size]
+
+			:flags:
+				nobody
+
+		::
+			Enfin, juste pour un instant...
+
+			:flags:
+				nobody
+
+		::
+			Si {:c_tu:} retransitionnes encore...
+
+			:flags:
+				nobody pre_trans
+
+		::
+			Pourrais {:c_tu:} me prendre dans {:c_tes:} {"bras?" not control}
+
+			:flags:
+				nobody cutoff
+
+		::
+			Non.
+
+			:flags:
+				nobody
+
+		::
+			Je n'aurai rien à dire.
+
+			:flags:
+				nobody
+
+	:wife:
+		:flags:
+			pre_trans
+
+		::
+			Est-ce que {:c_votre:} épouse aime 
+			les femmes, M{:p:} Nguyen? 
+			Est-ce que transitioner va aider avec
+			{:c_vos:} responsabilités reproductrices?
+
+		::
+			{:c_Je:} ne l'ai plus vue depuis belles lurettes.
+			C'est surtout pour {:c_moi:} que je fais ça.
+
+	:dictionary:
+		:flags:
+			post_trans
+
+		::
+			Je suis flattée par votre nouveau style.
+
+		::
+			Je ne pense pas qu'on ait des
+			choses en commun.
+
+		::
+			Combien de mots avez-vous
+			retiré de votre dictionnaire?
+
+		::
+			Il s'affine à chaque
+			fois que je le vois.
+
+			:flags:
+				nobody
+
+	:razors:
+		:flags:
+			post_trans
+
+		::
+			Vous y croyez à la
+			pénurie de rasoirs?
+
+			:flags:
+				character
+
+		::
+			Y'a une très forte demande.
+			Le Parti à produit un nombre
+			record de rasoirs.
+
+		::
+			[font_size=20]...[/font_size]
+
+			:flags:
+				nobody
+
+		::
+			C'est très embêtant.
+
+			:flags:
+				nobody
+
+		::
+			Et pourtant, ce qui est drôle, c'est
+
+			:flags:
+				cutoff
+
+		::
+			Je pense qu'on a
+			assez discuté ce soir.
+
+	:renewal:
+		:flags:
+			post_trans priority
+
+		::
+			Mme. Nguyen, vous êtes sensée
+			savoir que je ne peux approuver
+			le renouvellement de vos pronoms.
+
+		::
+			Ça nous mettrait toutes les deux
+			dans la merde.
+
+			:flags:
+				nobody
+
+		::
+			Et ça change quoi
+			de vos habitudes?
+
+		::
+			Ne serait-ce pas mieux
+			de s'entre-aider?
+
+			:flags:
+				character
+
+		::
+			Et si vous alliez au BUROAMOUR
+			voir si j'y suis?
+
+
+########################
+####### JUBILIST #######
+########################
+
+
+:jubilist:
+	:intro:
+		:flags:
+			pre_trans priority first_encounter
+
+		::
+			{:c_J:}ai entendu que tu aimais {:c_mon:} manifeste.
+
+			:flags:
+				character
+
+		::
+			Ne me dis pas que {:c_tu:} fais
+			partie de ces clowns attardés.
+
+		::
+			{:c_J:}aurais droit quand à {:c_ma:} redevance ?
+
+		::
+			Le BUROINFO est dans un
+			autre palais.
+
+		::
+			{:c_Je:} trouve dommage que tu
+			te sois trompée sur {:c_mon:} nom.
+
+	:red:
+		:flags:
+			difficulty_9 priority story
+
+		::
+			Tu sais, la plupart des gens
+			essaient au moins d'avoir une conversation.
+
+		::
+			T'es juste une connasse.
+
+			:flags:
+				nobody
+
+		::
+			Mais nan.
+
+		::
+			Je savais juste depuis
+			que je t'ai rencontré.e que...
+
+			:flags:
+				character
+
+		::
+			Tu ne mérites pas mon respect.
+
+			:flags:
+				character
+
+	:hazel:
+		:flags:
+			difficulty_10 priority story non_canon
+
+		::
+			Nouveau scénario de jeu de role auquel
+			{:c_J:}ai réfléchi pendant
+			mon trajet jusqu'ici:
+
+			:flags:
+				character
+
+		::
+			{:c_Je:} force mon flingue dans ta
+			gueule et tu signes des documents
+			très important pour maman.
+
+			:flags:
+				character
+
+		::
+			Et si t'es une gentille fille,
+			{:c_je:} pourrais même appuyer 
+			sur la gâchette.
+
+			:flags:
+				character
+
+		::
+			[shake rate=10.0 level=2][font_size=10]:o)[/font_size][/shake]
+
+			:flags:
+				character
+
+		::
+			{:c_Tu:} es pire que la marionette
+			qu'ils paradent partout à la télé.
+
+	:forms:
+		::
+			Il {:c_vous:} manque le
+			Formulaire 1, 3a, 3b,
+			et... 11 autres formulaires.
+
+		::
+			T'as vérifié derrière
+			ton oreille?
+
+	:crimes:
+		::
+			C'est quoi toute cette paperasse?
+			La liste de {:c_mes:} crimes et délits?
+
+			:flags:
+				character
+
+		::
+			Ah, non. C'est juste un répertoire banal.
+
+	:lime:
+		::
+			Non, {:c_vous:} ne pouvez pas
+			signer avec du jus de citron.
+
+		::
+			Et le citron vert alors?
+
+	:gun:
+		:flags:
+			post_trans
+
+		::
+			Désolé de gâcher ta fête mais
+			je sais déja que c'est une arme factice.
+
+		::
+			Oh non, elle est bien réelle.
+			Je vais juste pas la gâcher sur toi.
+
+		::
+			Je vais probablement me flinguer
+			quand ils viendront me chercher.
+
+			:flags:
+				character
+
+		::
+			Rien qu'a voir leurs gueules...
+
+			:flags:
+				character
+
+	:honk:
+		:flags:
+			post_trans
+
+		::
+			Encore le clow{"n?" not control}
+
+			:flags:
+				cutoff
+
+		::
+			[shake rate=20.0 level=5]POUET.[/shake]
+
+		::
+			Va faire du boucan aille{"urs." not control}
+
+			:flags:
+				cutoff
+
+		::
+			[shake rate=20.0 level=5]POUET POUET.[/shake]
+
+
+#######################
+######## CHILD ########
+#######################
+
+
+:child:
+	:intro:
+		:flags:
+			pre_trans priority first_encounter
+
+		::
+			Euh... Est-ce le BUROPRONOM?
+
+			:flags:
+				character
+
+		::
+			Es-{:c_tu:} perdue?
+			Où sont {:c_tes:} parents?
+
+			:flags:
+				nobody
+
+		::
+			{:c_Je:} suis ici pour
+			:flags:
+				character cutoff
+
+		::
+			La Néo-Police viendra d'ici-tôt
+			{:c_te:} ramener à la maison.
+
+			:flags:
+				nobody
+
+		::
+			[font_size=13][b][shake rate=20.0 level=5]NON.[/shake][/b][/font_size]
+
+	:red:
+		:flags:
+			difficulty_9 priority story
+
+		::
+			Pourquoi les adultes sont si méchants?
+
+			:flags:
+				character
+
+		::
+			Tu le sauras quand tu seras grand.
+
+		::
+			Pourquoi les adultes sont si bêtes?
+
+		::
+			Tu es trop jeune pour comprendre.
+
+		::
+			Tu rêves d'être encore petite.
+
+	:hazel:
+		:flags:
+			difficulty_10 priority story non_canon
+
+		::
+			Est-ce que t'as un zizi?
+
+			:flags:
+				character
+
+		::
+			Je—excuse moi petite mais ce {" n'est..." not control}
+
+			:flags:
+				cutoff
+
+		::
+			Est-ce que ça saigne tous les mois?
+
+		::
+			Vas jouer aux billes.
+
+		::
+			{:c_Ma:} maman m'a dit que
+			tu ne devrais pas travailler ici.
+
+		::
+			Autre chose à ajouter?
+
+		::
+			Nan, c'est tout.
+
+	:creep:
+		:flags:
+			pre_trans
+
+		::
+			Pourquoi {:c_je:} peut pas être un garçon?
+			Personne est obligé de le savoir...
+
+			:flags:
+				character
+
+		::
+			Ils savent tout.
+
+		::
+			Certains tueraient pour avoir
+			ce que {:c_tu:} as gâché.
+
+			:flags:
+				nobody
+
+		::
+			D'accord... [font_size=5]Sale folle.[/font_size]
+
+	:loser:
+		:flags:
+			post_trans priority
+
+		::
+			Ça dit quoi, pauvre tâche?
+
+			:flags:
+				character
+
+		::
+			Ça t'arrivera un jour.
+
+	:parents:
+		:flags:
+			post_trans priority
+
+		::
+			Tes parents sont au courant que t'es la?
+
+		::
+			Ils devraient l'être?
+
+	:rape:
+		:flags:
+			post_trans
+
+		::
+			Dois-je appeller tes par{"ents?" not control}
+
+			:flags:
+				cutoff
+
+		::
+			[font_size=13][b][shake rate=20.0 level=5]AU VIOOOOOL![/shake][/b][/font_size]
+
+
+########################
+######## FISHER ########
+########################
+
+
+:fisher:
+	:intro:
+		:flags:
+			pre_trans priority first_encounter
+
+		::
+			Pourquoi y'a t-il un prolo dans mon bureau?
+
+		::
+			Tu {:c_m:}as bien baisée.
+
+		::
+			Pardon?
+
+		::
+			Tu {:c_m:}as baisé.
+
+		::
+			Je ne {:c_te:} connais pas.
+
+	:red:
+		:flags:
+			difficulty_9 priority story
+
+		::
+			Ça va?
+
+			:flags:
+				character
+
+		::
+			Pardon? Bien sur que ça va.
+
+		::
+			Tout va bien dans le
+			meilleur des mondes.
+
+			:flags:
+				nobody
+
+		::
+			J'aime mon boulot.
+			Je suis fière de mon travail.
+
+			:flags:
+				nobody
+
+		::
+			Mais qu'est-ce que t'en a à foutre?
+
+			:flags:
+				nobody
+
+		::
+			Tu vas juste me tuer
+			dans tout les cas.
+
+			:flags:
+				nobody
+
+		::
+			... J'essayais juste d'être gentille.
+
+	:hazel:
+		:flags:
+			difficulty_10 priority story non_canon
+
+		::
+			Ne me fais pas tes beaux yeux.
+
+		::
+			Ne commence pas à pleurer devant moi.
+
+			:flags:
+				nobody
+
+		::
+			[shake rate=10.0 level=1]{:c_Je:} ne vais pas... {:c_Je:} dois...[/shake]
+			Donne {:c_moi:} juste une minute.
+
+		::
+			D'accord.
+
+			:flags:
+				character delay_5
+
+	:throw:
+		::
+			[font_size=20]...[/font_size]
+
+			:flags:
+				character
+
+		::
+			Il est interdit de lancer des projectiles.
+
+	:beard:
+		:flags:
+			pre_trans
+
+		::
+			Je ne savais pas que Limestock
+			n'as pas fait faillite.
+			La barbe est obligatoire?
+
+		::
+			Pff.
+
+	:forms:
+		::
+			Ces formulaires semblent... endommagés.
+
+		::
+			... {:c_Je:} les ai réparés.
+
+	:razors:
+		:flags:
+			pre_trans
+
+		::
+			Ah... belle barbe.
+			Dommage que ça ne fonctionne pas sur moi.
+
+		::
+			C'est difficile de trouver 
+			des rasoirs quand {:c_tu:}
+			en as besoin.
+
+		::
+			Ah bon?
+
+			:flags:
+				spell_razor_blade
+
+	:lesbian:
+		:flags:
+			post_trans
+
+		::
+			Bordel, la gouine de mes rêves
+			qui pointe son cul dans MON bureau?
+
+		::
+			[font_size=20]...[/font_size]
+
+		::
+			Pourrais-tu soulever ce coffre
+			avant de commencer?
+
+
+########################
+######## ADDICT ########
+########################
+
+
+:addict:
+	:intro:
+		:flags:
+			pre_trans priority first_encounter
+
+		::
+			J'ai eu une belle discussion avec
+			{:c_ton:} épouse hier soir.
+
+		::
+			Sois heureuse que t'as encore
+			toutes tes dents.
+
+	:red:
+		:flags:
+			difficulty_9 priority story
+
+		::
+			Je voulais vous demander.
+
+		::
+			Y'a eu un bon nombre d'individus
+			suspects dans mon bureau récemment.
+
+			:flags:
+				nobody
+
+		::
+			Peut-être des dissidents.
+
+			:flags:
+				nobody
+
+		::
+			Vous pensez que votre département
+			peut faire quelque chose pour
+			remédier à cela??
+
+			:flags:
+				nobody
+
+		::
+			Qui t'a permis de 
+			m'adresser la parole?
+
+	:hazel:
+		:flags:
+			difficulty_10 priority story non_canon
+
+		::
+			Une gamine est venu à mon bureau
+			l'autre jour à propos de {:c_toi:}.
+
+		::
+			Une gamine?
+
+		::
+			La vingtaine. Elle m'a pas donné de nom
+			mais elle ressemblait à deux gouttes d'eau
+
+			:flags:
+				cutoff
+
+		::
+			Pourquoi {:c_me:} demandes-tu cela?
+
+		::
+			C'est {:c_ta:} fille?
+
+		::
+			Tu {:c_m:}accuses 
+			d'avoir accouché?
+
+		::
+			Non, je... Enfin...
+
+		::
+			Bref.
+
+			:flags:
+				nobody
+
+	:audit:
+		::
+			Est-ce un contrôle?
+
+		::
+			Si quelqu'un demande,
+			{:c_je:} n'ai jamais mis les pieds ici.
+
+	:over:
+		::
+			Finissions-{:c_ennous:}.
+
+		::
+			Entendu.
+
+	:butch:
+		:flags:
+			post_trans
+
+		::
+			Je peux juste dire un truc
+			avant que tu me tues?
+
+		::
+			Grouille.
+
+		::
+			Je te préfèrais gouine.
+
+	:pliers:
+		:flags:
+			post_trans spell_pliers always_priority
+
+		::
+			Tous tes fichiers sont
+			déjà en ordre.
+
+		::
+			Que fais-tu encore ici?
+
+			:flags:
+				nobody
+
+		::
+			J'ai oublié mes pinces.
